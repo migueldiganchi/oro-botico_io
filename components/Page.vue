@@ -9,27 +9,33 @@
         v-if="isLogoVisible"
         :url="logoUrl"
         size="xs"
-        class="ma-0 mt-6 mb-9"
+        class="ma-0 mt-6 mb-9 animate__animated animate__pulse"
       />
 
       <!-- TITLE -->
-      <div class="mx-auto xs-box text-h5 mb-6"><b v-text="title" /></div>
+      <div
+        class="mx-auto xs-box text-h5 mb-6 animate__animated animate__fadeIn"
+      >
+        <b v-text="title" />
+      </div>
 
       <!-- BREADCRUMBS -->
       <breadcrumbs
         v-if="breadcrumbs && breadcrumbs.length"
-        class="mb-9"
+        class="mb-9 animate__animated animate__fadeIn"
         :items="breadcrumbs"
       />
 
       <!-- DESCRIPTION -->
-      <p class="ma-0 mb-9 pa-0 xxs-box mx-auto">
+      <p
+        class="ma-0 mb-9 pa-0 xxs-box mx-auto animate__animated animate__fadeIn"
+      >
         <span v-html="description" />
       </p>
     </div>
 
     <!-- DYNAMIC CONTENT -->
-    <div align="center">
+    <div align="center" class="animate__animated animate__fadeIn">
       <slot />
     </div>
   </div>

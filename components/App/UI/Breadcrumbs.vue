@@ -1,6 +1,6 @@
 <template>
   <div
-    class="App-breadcrumbs pa-2 d-inline-block animate__animated animate__fadeIn"
+    class="App-breadcrumbs pa-2 d-inline-block"
   >
     <div v-for="(item, index) in items" :key="index" class="d-inline-block">
       <v-tooltip top color="#d1a837">

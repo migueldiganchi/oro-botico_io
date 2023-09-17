@@ -3,6 +3,7 @@
     <nuxt-link v-if="href == ''" to="/">
       <v-img
         :src="url"
+        :lazy-src="url"
         :height="size === 'xs' ? 'auto' : '190px'"
         alt="Oro Bótico"
         referrerpolicy="no-referrer"
@@ -42,5 +43,11 @@ export default {
       default: "",
     },
   },
+
+  computed: {
+    lazyUrl() {
+      return require("@/assets/media/trading-small.png");
+    }
+  }
 };
 </script>

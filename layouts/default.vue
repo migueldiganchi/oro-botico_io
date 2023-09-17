@@ -308,13 +308,17 @@
         <!-- Main Presentation -->
         <div class="pt-6">
           <div v-if="$route.name == 'index'">
-            <div class="presentation-logo mb-9">
+            <div
+              class="presentation-logo mb-9 animate__animated animate__pulse"
+            >
               <logo
                 :url="homeLogoUrl"
                 :href="$route.name == 'm-nickname' ? '' : ''"
               />
             </div>
-            <div class="presentation-text mt-3 text-light">
+            <div
+              class="presentation-text mt-3 text-light animate__animated animate__fadeIn"
+            >
               <h2 class="mx-auto d-inline-block" style="max-width: 360px">
                 <span>TRADING</span>
                 <b class="text-gold">SIMPLE</b>,
@@ -325,7 +329,10 @@
             </div>
           </div>
 
-          <div v-if="hostMember && $route.name == 'm-nickname'">
+          <div
+            v-if="hostMember && $route.name == 'm-nickname'"
+            class="animate__animated animate__fadeIn"
+          >
             <logo :url="hostMemberPictureUrl" size="xs" class="mb-9" />
 
             <div class="presentation-text mt-3 text-light">
@@ -341,7 +348,9 @@
         </div>
 
         <!-- Interaction buttons -->
-        <div class="presentation-actions text-center mt-15">
+        <div
+          class="presentation-actions text-center mt-15 animate__animated animate__fadeIn"
+        >
           <div class="hidden-on-mobile">
             <!-- Stepper Toggler Buttons -->
             <v-btn

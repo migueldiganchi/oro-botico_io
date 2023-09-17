@@ -44,7 +44,7 @@ export default {
     url: {
       type: String,
       
-      default: "http://www.ciudadbotica.com",
+      default: "https://www.ciudadbotica.com",
     },
   },
   methods: {

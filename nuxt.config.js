@@ -183,8 +183,8 @@ export default {
    */
   axios: {
     // Workaround to avoid enforcing hard-coded
-    // localhost:3555 > https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: API_BASE_URL || "http://localhost:3555/",
+    // localhost:9699 > https://github.com/nuxt-community/axios-module/issues/308
+    baseURL: API_BASE_URL || "http://localhost:9699/",
   },
 
   env: {},

@@ -163,7 +163,7 @@ export default {
     toggleSharing() {
       this.$bus.$emit(
         "toggle-sharing",
-        "http://live-community.com/tips/" + this.$route.params.id
+        "https://oro.ciudadbotica.com/tips/" + this.$route.params.id
       );
     },
     donate() {

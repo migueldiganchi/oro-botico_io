@@ -31,7 +31,7 @@
       <v-spacer />
 
       <v-btn
-        @click="toggleSharing(`http://cardiobotica.com/tips/${tip.id}`)"
+        @click="toggleSharing(`https://cardiobotica.com/tips/${tip.id}`)"
         icon
         :disabled="loading"
         class="text-light"

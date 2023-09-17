@@ -23,7 +23,7 @@
           <div class="text-center">
             <img
               :src="feature.mediaUrl"
-              alt="Vendedor QR"
+              :alt="feature.title"
               class="d-inline-block feature-image"
             />
           </div>

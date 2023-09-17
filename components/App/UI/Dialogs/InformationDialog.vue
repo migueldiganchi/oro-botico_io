@@ -107,7 +107,6 @@ export default {
     },
     mediaUrl: {
       type: String,
-
       default: null,
     },
     mediaMaxWidth: {

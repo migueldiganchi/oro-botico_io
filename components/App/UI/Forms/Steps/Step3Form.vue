@@ -1,14 +1,14 @@
 <template>
   <div class="step-3-content pa-9">
     <h1 class="mt-3 mb-6">
-      <v-icon class="display-3">{{ icon }}</v-icon>
+      <v-icon class="display-3 text-gold">{{ icon }}</v-icon>
       <!-- <v-icon v-if="secondIcon" class="display-3 ml-1">{{ secondIcon }}</v-icon> -->
     </h1>
     <div class="mb-9">
-      <h1 class="mb-3" v-html="title" />
+      <h1 class="mb-6" v-html="title" />
       <span style="font-size: 18.1px" v-html="description" />
     </div>
-    <v-expansion-panels>
+    <v-expansion-panels v-if="false">
       <v-expansion-panel v-for="step in steps" :key="step.key">
         <v-expansion-panel-header>
           <span v-html="step.title" class="text-left" />
@@ -26,27 +26,27 @@ export default {
   props: {
     icon: {
       type: String,
-      
+
       default: "mdi-share-variant",
     },
     // secondIcon: {
     //   type: String,
-    //   
+    //
     //   default: 'mdi-cash-check',
     // },
     title: {
       type: String,
-      
+
       default: "",
     },
     description: {
       type: String,
-      
+
       default: null,
     },
     disabled: {
       type: Boolean,
-      
+
       default: () => false,
     },
   },

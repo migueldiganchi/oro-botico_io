@@ -5,27 +5,8 @@
       <member :member="member" />
     </div> -->
 
-    <div class="App-xxs-box mt-15 pt-12 mx-auto text-dark">
-      <h3 class="mb-15">CONSTRUYE AHORA TU NUEVA LIBERTAD FINANCIERA</h3>
-
-      <!-- Sharing Button -->
-      <div class="text-center">
-        <v-btn
-          @click="$bus.$emit('toggle-sharing', '/')"
-          class="ml-3 bg-gold pl-3"
-          rounded
-          elevation="3"
-          text
-          large
-        >
-          <v-icon class="mr-2 text-light">mdi-share-variant</v-icon>
-          <span class="text-light">Compartir</span>
-        </v-btn>
-      </div>
-    </div>
-
     <!-- FEATURES -->
-    <div class="App-features pt-12 mt-15">
+    <div class="App-features mt-15">
       <h1 class="mb-15 text-h3 pb-9 text-dark">
         <b>¿Qué ofrecemos?</b>
       </h1>
@@ -57,6 +38,25 @@
           </p>
         </v-col>
       </v-row>
+    </div>
+
+    <div class="App-xxs-box pt-12 mt-15 mx-auto text-dark">
+      <h3 class="mb-15">COMPARTE ESTE INCREÍBLE CONOCIMIENTO</h3>
+
+      <!-- Sharing Button -->
+      <div class="text-center">
+        <v-btn
+          @click="$bus.$emit('toggle-sharing', '/')"
+          class="ml-3 bg-gold pl-3"
+          rounded
+          elevation="3"
+          text
+          large
+        >
+          <v-icon class="mr-2 text-light">mdi-share-variant</v-icon>
+          <span class="text-light">Compartir</span>
+        </v-btn>
+      </div>
     </div>
 
     <!--PRESENTATION -->
@@ -296,8 +296,6 @@ export default {
       isDigitalProductOpened: false,
       isInformationDialogOpen: false,
 
-      videoId: "Kljvalg50Gg",
-
       currentInfo: null,
       waitingMessage: "",
       companies: [], // @todo: Complete Sponsors
@@ -346,22 +344,22 @@ export default {
 
     features() {
       return [
-        {
-          key: 18,
-          mediaUrl:
-            require("~/assets/media/features/crown.png") + "?" + new Date(),
-          title: "Oro System",
-          description:
-            "Ofrecemos un sistema completo que combina canales educativos con contenido grabado, cursos en vivo impartidos por profesionales, sesiones operativas y prácticas con traders rentables.",
-        },
+        // {
+        //   key: 18,
+        //   mediaUrl:
+        //     require("~/assets/media/features/crown.png") + "?" + new Date(),
+        //   title: "Servicio Deluxe",
+        //   description:
+        //     "Tendrás tu propio representante virtual atendiendo preguntas frecuentes de tus posibles clientes",
+        // },
 
         {
           key: 27,
           mediaUrl:
             require("~/assets/media/features/calendar.png") + "?" + new Date(),
-          title: "Calendario Semanal",
+          title: "Horarios",
           description:
-            "Más de 3 capacitaciones diarias apoyadas con una comunidad interactiva con más de 3000 miembros, seguimiento personalizado y operaciones en tiempo real.",
+            "Tu Asistente Virtual proporcionará a tus alumnos horarios de atención y disponibilidad, mejorando la comunicación entre docentes y estudiantes para una experiencia educativa más fluida.",
         },
 
         {
@@ -370,7 +368,7 @@ export default {
             require("~/assets/media/features/brain.png") + "?" + new Date(),
           title: "Mindset",
           description:
-            "Se enfoca en crear una mentalidad de disciplina, paciencia y perseverancia, y en fomentar la toma de decisiones informadas y bien pensadas",
+            "Tu Ayudante Virtual brindará a tus alumnos consejos clave sobre el Mindset en el trading, fortaleciendo su mentalidad para enfrentar desafíos y lograr el éxito en sus operaciones.",
         },
         {
           key: 2,
@@ -378,17 +376,18 @@ export default {
             require("~/assets/media/features/trading.png") + "?" + new Date(),
           title: "Señales de negociación",
           description:
-            "Las señales indican cómo y cuándo debes transaccionar tu inversión para obtener los mejores resultados",
+            "Tu Asistente Virtual estará listo para guiar a tus alumnos en el análisis y las señales de negociación, proporcionando conocimientos valiosos para sus operaciones.",
         },
-        {
-          key: 3,
-          mediaUrl:
-            require("~/assets/media/features/group-chat.png") +
-            "?" +
-            new Date(),
-          title: "Clases en vivo",
-          description: "Te capacitamos para mejorar tu rendimiento económico",
-        },
+        // {
+        //   key: 3,
+        //   mediaUrl:
+        //     require("~/assets/media/features/group-chat.png") +
+        //     "?" +
+        //     new Date(),
+        //   title: "Clases en vivo",
+        //   description:
+        //     "Clases asistidas con IA podrán dar a tus alumnos la tranquilidad de que siempre estarán recibiendo asistencia",
+        // },
       ];
     },
 

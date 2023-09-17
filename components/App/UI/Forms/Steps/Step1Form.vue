@@ -1,14 +1,14 @@
 <template>
   <div class="step-1-content pa-9">
     <h1 class="mt-3 mb-6">
-      <v-icon class="display-3">{{ icon }}</v-icon>
+      <v-icon class="display-3 text-gold">{{ icon }}</v-icon>
     </h1>
     <div class="mb-9">
-      <h1 class="mb-3" v-html="title" />
+      <h1 class="mb-6" v-html="title" />
       <span style="font-size: 18.1px" v-html="description" />
     </div>
 
-    <v-expansion-panels>
+    <v-expansion-panels v-if="false">
       <v-expansion-panel v-for="step in steps" :key="step.key">
         <v-expansion-panel-header>
           <span v-html="step.title" class="text-left" />
@@ -46,18 +46,9 @@ export default {
       steps: [
         {
           key: 1,
-          title: "¿Como empiezo?",
-          content: `
-            <b>¡Es muy simple!</b> Crea una cuenta en <b>Libertex</b> y <b>comienza a ganar ahora</b>.
-            <br />
-            <br />
-            <b><a href="https://bit.ly/3zYTJ04" target="_blank" />Registrate aquí</a></b>
-            <i class="mdi mdi-open-in-new"></i>
-            <br />
-            <br />
-            <small class="text-muted"><b>¡ATENCIÓN!</b> Al darle click a este enlace se abrirá una 
-            nueva ventana con el <b>link de registro</b></small>
-            `,
+          title:
+            "¿Cómo puedo conectar mi asistente virtual a mi plataforma educativa?",
+          content: `Registra tu cuenta y nosotros te guiaremos en el proceso`,
         },
         {
           key: 2,

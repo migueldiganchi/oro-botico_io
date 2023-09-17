@@ -273,7 +273,8 @@
         <div v-else class="text-center text-gold pt-3">
           <v-icon size="72px" class="text-gold mb-6">mdi-bell</v-icon>
           <p>
-            Necesitas estar registrado para acceder a las novedades de Oro Bótico
+            Necesitas estar registrado para acceder a las novedades de Oro
+            Bótico
           </p>
           <!-- <div class="mt-9">
             <v-btn
@@ -317,8 +318,8 @@
               <h2 class="mx-auto d-inline-block" style="max-width: 360px">
                 <span>TRADING</span>
                 <b class="text-gold">SIMPLE</b>,
-                <b class="text-gold">INTUITIVO</b> Y
-                <b class="text-gold">RENTABLE</b> GUIADO POR INTELIGENCIA
+                <b class="text-gold">INTUITIVO</b>,
+                <b class="text-gold">RENTABLE</b> Y GUIADO POR INTELIGENCIA
                 <b class="text-gold">ARTIFICIAL</b>
               </h2>
             </div>
@@ -593,7 +594,10 @@
           <v-col class="ma-0 pa-0">
             <!-- YOUTUBE VIDEO -->
             <div
-              v-if="$route.name === 'index' || $route.name === 'm-nickname'"
+              v-if="
+                false &&
+                ($route.name === 'index' || $route.name === 'm-nickname')
+              "
               class="text-center"
             >
               <h2
@@ -882,11 +886,9 @@ export default {
       step3: "Gana",
     },
     stepDescriptions: {
-      description1: `Crea una cuenta de Trading Gratis`,
-      description2: `Sumate a nuestro <b>CANAL GRATUITO</b>`,
-      description3: `Aprovecha tus contactos y gana dinero de <b>manera inteligente</b>. Adicionalmente puedes convertirte
-        en <b>partner</b> del sistema y podrás recomendar tu <b>link</b> para ganar <b>ingresos pasivos</b>
-        y así generar incluso más dinero del que puedes producir con el Trading.`,
+      description1: `Comienza conectando tu asistente virtual a tu plataforma educativa en línea. Es un proceso simple y rápido que te permitirá personalizar la experiencia de aprendizaje.`,
+      description2: `Tu asistente virtual se convierte en tu aliado educativo. Puedes programarlo para enseñar lecciones, responder preguntas y proporcionar información relevante. Tus alumnos tendrán acceso a un tutor virtual disponible las 24 horas.`,
+      description3: `AAprovecha al máximo tu asistente virtual para aumentar tus ingresos. Ofrece cursos adicionales, vende material de estudio y permite que tu asistente realice ventas en automático. Esto significa más ganancias para ti sin esfuerzo adicional.`,
     },
     step: 1,
     isDrawerLeftOpen: null,

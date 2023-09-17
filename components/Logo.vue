@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="logo d-inline-block"
-    :class="{ sm: size === 'sm', xs: size === 'xs' }"
-  >
+  <div class="logo d-inline-block" :class="{ xs: size === 'xs' }">
     <nuxt-link v-if="href == ''" to="/">
       <v-img
         :src="url"

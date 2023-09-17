@@ -5,7 +5,12 @@
   >
     <div class="title mb-6">
       <!-- LOGO -->
-      <logo v-if="isLogoVisible" :url="logoUrl" class="ma-0 mt-6 mb-9" />
+      <logo
+        v-if="isLogoVisible"
+        :url="logoUrl"
+        size="xs"
+        class="ma-0 mt-6 mb-9"
+      />
 
       <!-- TITLE -->
       <div class="mx-auto xs-box text-h5 mb-6"><b v-text="title" /></div>

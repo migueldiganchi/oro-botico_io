@@ -78,6 +78,13 @@ export default {
       ],
     };
   },
+
+  computed: {
+    defaultPictureUrl() {
+      return require("~/assets/media/user.png");
+    },
+  },
+
   methods: {
     openMemberInfo(member) {
       const memberInfo = {
@@ -85,7 +92,7 @@ export default {
         subtitle: member.description,
         description: member.bio,
         mediaUrl: member.pictureUrl || this.defaultPictureUrl,
-        to: `/members/${member.nickname}`,
+        to: `/members/${member._id}`,
         toCaption: "Ver Perfil",
         toIcon: "mdi-robot",
       };

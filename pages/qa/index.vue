@@ -16,58 +16,66 @@ export default {
       questions: [
         {
           key: 1,
-          question: "¿Cuál es el precio del servicio?",
-          answer: "El servicio es completamente gratuito",
+          question: "¿Qué es Oro Bótico?",
+          answer:
+            "Oro Bótico es una plataforma en línea que te permite crear asistentes virtuales personalizados para la enseñanza de trading de forma sencilla y efectiva.",
         },
         {
           key: 2,
-          question: "¿Como empiezo?",
-          answer: `Registrate en <a href='https://bit.ly/3zYTJ04'>este link</a> y comienza a asistir a nuestras 
-            clases gratuitas para ver como se opera en vivo. Una vez que sientas confianza para comenzar 
-            a invertir, debes cargar en tu cuenta un mínimo de u$d 100`,
+          question: "¿Cómo funciona Oro Bótico?",
+          answer:
+            "Oro Bótico te brinda herramientas para diseñar, entrenar y desplegar asistentes virtuales que pueden responder preguntas frecuentes de tus alumnos sobre trading.",
         },
         {
           key: 3,
-          question: "¿Como puedo ser Partner?",
+          question: "¿Qué puedo lograr con Oro Bótico?",
           answer:
-            "Habla con el dueño de este sitio para registrarte como partner e indicarte cuáles son los siguientes pasos",
-        },
-        {
-          key: 5,
-          question: "¿Cuándo y cómo son las clases?",
-          answer:
-            "Nuestras clases son dinámicas. Por lo tanto debes estar en contacto contante con la persona dueña de este sitio.",
+            "Con Oro Bótico, puedes mejorar la experiencia de aprendizaje de tus estudiantes en trading al proporcionar respuestas rápidas y precisas a sus preguntas.",
         },
         {
           key: 4,
-          question: "¿Cómo contacto al dueño de este sitio?",
+          question:
+            "¿Necesito experiencia en programación para usar Oro Bótico?",
           answer:
-            "Abajo a la derecha encontrarás un botón de Whatsapp que te dirijirá con la persona dueña de este sitio.",
+            "No, Oro Bótico está diseñado para ser utilizado por personas sin experiencia en programación. Nuestra plataforma es fácil de usar y no requiere conocimientos técnicos.",
         },
         {
-          key: 9,
-          question: "¿Cuál es la mejor plataforma para operar?",
+          key: 5,
+          question: "¿Es seguro usar Oro Bótico?",
           answer:
-            "Por su sencillez, nosotros sugerimos que manejes <b>Libertex</b>. Aunque si tienes tu preferida, será bienvenida la experiencia",
+            "Sí, nos tomamos muy en serio la seguridad de tus datos. Utilizamos medidas de seguridad avanzadas para proteger la información de nuestros usuarios.",
         },
         {
           key: 6,
-          question: "¿Como se retira el dinero de Libertex?",
+          question:
+            "¿Puedo personalizar la apariencia de mi asistente virtual?",
           answer:
-            "Se puede hacer a través de cuentas bancarias (Lo cuál no es recomendable porque debes declarar ganancias). O puedes operar directamente con criptomonedas (El dueño de este sitio sabrá guiarte en el proceso)",
+            "Sí, puedes personalizar la apariencia y el comportamiento de tu asistente virtual para que se adapte a tu marca y estilo.",
         },
         {
-          key: 18,
-          question: "¿En cuanto tiempo se consigue la rentabilidad?",
+          key: 7,
+          question: "¿Cuáles son los costos asociados con Oro Bótico?",
           answer:
-            "Hay muchos factores de los que depende la rentabilidad. Depende mucho del enfoque con el que operes con tu cuenta y de cómo respetes tu PLAN DE TRADING",
+            "Ofrecemos planes de precios flexibles para adaptarnos a tus necesidades. Puedes consultar nuestros precios en nuestro sitio web.",
         },
-        // {
-        //   key: 18,
-        //   question: "¿Qué es el trading institucional?",
-        //   answer:
-        //     "Se puede hacer a través de cuentas bancarias (Lo cuál no es recomendable porque debes declarar ganancias). O puedes.",
-        // },
+        {
+          key: 8,
+          question: "¿Ofrecen soporte técnico?",
+          answer:
+            "Sí, tenemos un equipo de soporte técnico disponible para ayudarte en caso de problemas o preguntas. Puedes comunicarte con nosotros a través de correo electrónico o chat en vivo.",
+        },
+        {
+          key: 9,
+          question: "¿Puedo probar Oro Bótico antes de comprometerme?",
+          answer:
+            "Sí, ofrecemos una versión de prueba gratuita para que puedas explorar nuestras funciones antes de tomar una decisión.",
+        },
+        {
+          key: 10,
+          question: "¿Cómo puedo comenzar a usar Oro Bótico?",
+          answer:
+            "Es fácil comenzar con Oro Bótico. Solo regístrate en nuestra plataforma, crea tu asistente virtual y comienza a mejorar la experiencia de aprendizaje de tus estudiantes en trading.",
+        },
       ],
       breadcrumbItems: [
         {

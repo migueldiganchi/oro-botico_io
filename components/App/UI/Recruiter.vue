@@ -4,17 +4,16 @@
 
     <p class="text-dark mt-6 mb-12 pa-0 text-h6 text-thin">
       <span>
-        Me interesa crear una cuenta en <b>Libertex</b>, para así obtener los
-        <b>beneficios gratuitos</b> de <b>Oro Bótico</b> e
-        <b>impactar positivamente mi vida</b>, tanto <b>personal</b> como
-        <b>profesionalmente</b></span
-      >
+        Me interesa unirme a <b>Oro Bótico</b> para <b>aprender trading</b> de
+        manera personalizada con la ayuda de <b>asistentes virtuales</b>. ¡Estoy
+        emocionado por comenzar este <b>viaje hacia el éxito financiero</b>!
+        Regístrame ahora y comencemos <b>juntos</b>.
+      </span>
     </p>
 
     <div class="mb-9">
       <v-btn
-        href="https://bit.ly/3zYTJ04"
-        target="_blank"
+        to="/auth/new"
         large
         rounded
         outlined
@@ -22,7 +21,7 @@
         class="bg-gold"
       >
         <span>Me anoto!</span>
-        <v-icon class="ml-3">mdi-open-in-new</v-icon>
+        <v-icon class="ml-3">mdi-account-plus</v-icon>
       </v-btn>
     </div>
 
@@ -41,8 +40,8 @@
         <br />
         <br />
         <span class="text-dark"
-          >Ya soy parte de <b>Oro Bótico</b>, y me encantaría tener mi
-          propio sitio promocional</span
+          >Ya soy parte de <b>Oro Bótico</b>, y me encantaría tener mi propio
+          sitio promocional</span
         >
         <br />
         <br />

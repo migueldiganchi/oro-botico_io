@@ -15,7 +15,10 @@
       </div>
     </div>
 
-    <v-card-actions class="bg-dark text-center pa-2" style="border-top: solid 1px #c9c9c999;">
+    <v-card-actions
+      class="bg-dark text-center pa-2"
+      style="border-top: solid 1px #c9c9c999"
+    >
       <v-btn
         @click.stop.prevent="expandTip(tip)"
         :to="`/tips/${tip.id}`"

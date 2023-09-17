@@ -1,0 +1,45 @@
+{
+  "name": "live-io",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "14.17.6",
+    "npm": "9.3.0"
+  },
+  "scripts": {
+    "dev": "nuxt --port 9969",
+    "build": "nuxt build",
+    "start": "nuxt start --port 9969",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-regular-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/vue-fontawesome": "^0.1.10",
+    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/pwa": "^3.0.0-beta.20",
+    "@nuxtjs/recaptcha": "^1.1.2",
+    "dotenv": "^16.1.0",
+    "firebase": "^7.24.0",
+    "js-cookie": "^3.0.5",
+    "nuxt": "^2.16.3",
+    "tiptap-vuetify": "^2.24.0",
+    "vue": "^2.6.12",
+    "vue-server-renderer": "^2.6.12",
+    "vue-social-sharing": "^2.4.7",
+    "vue-template-compiler": "^2.6.12",
+    "vue-vimeo-player": "^0.1.0",
+    "vue-youtube-embed": "^2.2.2",
+    "vuelidate": "^0.7.7"
+  },
+  "devDependencies": {
+    "@nuxtjs/moment": "^1.6.1",
+    "@nuxtjs/vuetify": "^1.11.2",
+    "fibers": "^5.0.0",
+    "node-sass": "^5.0.0",
+    "prettier": "^2.8.8",
+    "sass-loader": "^7.1.0"
+  }
+}

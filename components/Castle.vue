@@ -255,7 +255,7 @@
       <v-col cols="12" sm="12" md="12" lg="5">
         <div class="text-lg-left" style="max-width: 450px; margin: auto">
           <h1 class="d-block text-thin text-dark mb-9">
-            ¡<b>Aprende Trading</b> obteniendo <b>GRANDES GANANCIAS</b>!
+            ¡<b>Enseña Trading</b> obteniendo <b>GRANDES GANANCIAS</b>!
           </h1>
           <h1 class="d-block text-dark text-thin mt-9">
             Convierte a tu celular en una
@@ -344,14 +344,13 @@ export default {
 
     features() {
       return [
-        // {
-        //   key: 18,
-        //   mediaUrl:
-        //     require("~/assets/media/features/crown.png") + "?" + new Date(),
-        //   title: "Servicio Deluxe",
-        //   description:
-        //     "Tendrás tu propio representante virtual atendiendo preguntas frecuentes de tus posibles clientes",
-        // },
+        {
+          key: 18,
+          mediaUrl: require("~/assets/media/coding.png") + "?" + new Date(),
+          title: "Asistente Virtual",
+          description:
+            "Tendrás un Chatbot exclusivo para responder preguntas de tus alumnos, garantizando una experiencia educativa personalizada y de alta calidad.",
+        },
 
         {
           key: 27,
@@ -359,7 +358,7 @@ export default {
             require("~/assets/media/features/calendar.png") + "?" + new Date(),
           title: "Horarios",
           description:
-            "Tu Asistente Virtual proporcionará a tus alumnos horarios de atención y disponibilidad, mejorando la comunicación entre docentes y estudiantes para una experiencia educativa más fluida.",
+            "Tu Asistente Digital proporcionará a tus alumnos horarios de atención y disponibilidad, mejorando la comunicación entre docentes y estudiantes para una experiencia educativa más fluida.",
         },
 
         {
@@ -368,7 +367,7 @@ export default {
             require("~/assets/media/features/brain.png") + "?" + new Date(),
           title: "Mindset",
           description:
-            "Tu Ayudante Virtual brindará a tus alumnos consejos clave sobre el Mindset en el trading, fortaleciendo su mentalidad para enfrentar desafíos y lograr el éxito en sus operaciones.",
+            "Tu Ayudante Inteligente brindará a tus alumnos consejos clave sobre el Mindset en el trading, fortaleciendo su mentalidad para enfrentar desafíos y lograr el éxito en sus operaciones.",
         },
         {
           key: 2,

@@ -1,18 +1,20 @@
 <template>
-  <v-card dark>
-    <v-card-title
-      class="pl-4 bg-light text-left text-dark"
-      :class="{ 'mb-2': isDescriptionVisible }"
-    >
-      <small>{{ notification.title }}</small>
-    </v-card-title>
+  <v-card light>
+    <v-card-body class="red">
+      <v-card-title
+        class="pl-4 text-left text-dark"
+        :class="{ 'mb-2': isDescriptionVisible }"
+      >
+        <small>{{ notification.title }}</small>
+      </v-card-title>
 
-    <v-card-subtitle
-      v-if="isDescriptionVisible"
-      class="py-6 ml-0 pl-4 ma-0 text-left"
-    >
-      {{ notification.description }}
-    </v-card-subtitle>
+      <v-card-subtitle
+        v-if="isDescriptionVisible"
+        class="py-6 ml-0 pl-4 ma-0 text-left"
+      >
+        {{ notification.description }}
+      </v-card-subtitle>
+    </v-card-body>
 
     <v-card-actions class="bg-dark-gradient pr-2">
       <small class="text-light ml-2">{{

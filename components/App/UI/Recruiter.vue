@@ -28,24 +28,8 @@
     <div class="mb-9 mx-auto x-small-box">
       <br />
       <small class="text-dark"
-        ><b class="text-dark">¡ATENCIÓN!</b> Al darle click a este botón se
-        abrirá un formulario de registro a <b>Libertex</b></small
+        ><b>¿ESTAS LISTO PARA CAMBIAR TU REALIDAD FINANCIERA?</b></small
       >
-      <div v-if="false">
-        <br />
-        <br />
-        <br />
-        <i class="mdi mdi-crown text-gold text-h2 text-shadow" />
-        <br />
-        <br />
-        <br />
-        <span class="text-dark"
-          >Ya soy parte de <b>Oro Bótico</b>, y me encantaría tener mi propio
-          sitio promocional</span
-        >
-        <br />
-        <br />
-      </div>
     </div>
   </div>
 </template>

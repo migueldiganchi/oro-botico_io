@@ -35,7 +35,7 @@ export default {
         name: "Oro Bótico",
         content:
           process.env.npm_package_description ||
-          "Universidad Virtual de Trading Profesional",
+          "Universidad Virtual de Trading Dirigida con Inteligencia Artificial",
       },
     ],
     link: [

@@ -67,7 +67,7 @@
           <span>Marcar como no leído</span>
         </v-tooltip>
 
-        <v-tooltip v-else top color="green">
+        <v-tooltip v-else top color="#d1a837">
           <template v-slot:activator="{ on, attrs }">
             <v-btn v-bind="attrs" v-on="on" icon @click="show(notification)"
               ><v-icon>mdi-eye</v-icon></v-btn

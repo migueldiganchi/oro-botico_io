@@ -243,7 +243,16 @@
           <span v-if="!isNotificationListOpen">DICCIONARIO</span>
 
           <!-- Notifications Title -->
-          <span v-if="isNotificationListOpen">NOTIFICACIONES</span>
+          <span v-if="isNotificationListOpen">
+            <nuxt-link
+              to="/dashboard/notifications"
+              class="white--text"
+              style="text-decoration: none"
+              v-if="isAuthenticated"
+              >NOTIFICACIONES</nuxt-link
+            >
+            <span v-if="!isAuthenticated">NOTIFICACIONES</span>
+          </span>
         </h5>
       </div>
 
@@ -319,13 +328,14 @@
             <div
               class="presentation-text mt-3 text-light animate__animated animate__fadeIn"
             >
-              <h2 class="mx-auto d-inline-block" style="max-width: 360px">
+              <h1 CLASS="mb-3">ORO <span class="text-gold">BÓTICO</span></h1>
+              <h3 class="mx-auto d-inline-block" style="max-width: 360px">
                 <span>TRADING</span>
                 <b class="text-gold">SIMPLE</b>,
                 <b class="text-gold">INTUITIVO</b>,
                 <b class="text-gold">RENTABLE</b> Y GUIADO POR INTELIGENCIA
                 <b class="text-gold">ARTIFICIAL</b>
-              </h2>
+              </h3>
             </div>
           </div>
 
@@ -752,7 +762,9 @@
     </div>
 
     <!-- Page Footer -->
-    <div class="App-footer elevation-6 white--text text-center d-block pa-15 bg-tr-white">
+    <div
+      class="App-footer elevation-6 white--text text-center d-block pa-15 bg-tr-white"
+    >
       <div class="d-inline-block">
         <span class="text-dark"
           ><b>ORO </b><b class="text-gold">BÓTICO</b></span
@@ -894,7 +906,7 @@ export default {
     urlToShare: "",
     stepTitles: {
       step1: "Conecta",
-      step2: "Aprende",
+      step2: "Enseña",
       step3: "Gana",
     },
     stepDescriptions: {

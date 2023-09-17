@@ -4,7 +4,7 @@
       <v-img
         :src="url"
         :lazy-src="url"
-        :height="size === 'xs' ? 'auto' : '190px'"
+        :height="size === 'xs' ? 'auto' : '180px'"
         alt="Oro Bótico"
         referrerpolicy="no-referrer"
         contain
@@ -15,7 +15,7 @@
     <a v-if="href" :href="href">
       <v-img
         :src="url"
-        :height="size === 'xs' ? 'auto' : '190px'"
+        :height="size === 'xs' ? 'auto' : '180px'"
         alt="Oro Bótico"
         referrerpolicy="no-referrer"
         contain

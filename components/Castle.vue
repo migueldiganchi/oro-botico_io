@@ -220,12 +220,9 @@
             class="text-dark d-inline-block text-thin"
             style="max-width: 540px !important"
           >
-            <span
-              >Gana <b>en dólares</b> recomendando los
-              <b>extraordinarios servicios de Libertex</b> y aumenta tus
-              ingresos automatizando los procesos de atención de tu
-              negocio.</span
-            >
+            ¡<b>Amplifica tus ganancias</b> con <b>Oro Bótico</b>! Deja que tu
+            asistente virtual promocione tus <b>cursos</b>, <b>productos</b> y
+            <b>servicios</b> en línea con un megáfono digital 📣💰
           </h1>
         </div>
       </v-col>

@@ -2,6 +2,7 @@
   <div class="App-member-list">
     <v-row justify="center" align="center">
       <v-col
+        class="pa-6"
         v-for="(member, memberIndex) in members"
         :key="memberIndex"
         :md="member.flex || 3"

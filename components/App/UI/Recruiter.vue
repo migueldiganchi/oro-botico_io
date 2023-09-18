@@ -1,6 +1,8 @@
 <template>
   <div class="recruiter-box small-box">
-    <v-icon class="text-h1 my-12 text-dark">mdi-emoticon-cool</v-icon>
+    <v-icon class="my-12 text-gold" size="99px"
+      >mdi-emoticon-cool-outline</v-icon
+    >
 
     <p class="text-dark mt-6 mb-12 pa-0 text-h6 text-thin">
       <span>

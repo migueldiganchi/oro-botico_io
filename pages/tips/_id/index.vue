@@ -22,12 +22,7 @@
 
       <div class="text-lg-h6 text-md-h7 my-12">
         <div class="mb-6 text-center">
-          <v-btn
-            to="/tips?random=1"
-            rounded
-            large
-            class="bg-gold white--text"
-          >
+          <v-btn to="/tips?random=1" rounded large class="bg-gold white--text">
             <v-icon class="mr-2 mt-2">mdi-comment-arrow-right</v-icon>
             <span>Consejo al azar</span>
           </v-btn>
@@ -123,6 +118,62 @@ export default {
       };
     });
   },
+
+  head() {
+    console.log("[this.currentTip]", this.currentTip);
+
+    if (!this.robot) {
+      console.log("[this robot does not exist]");
+      return;
+    }
+
+    const {
+      id: tipId,
+      title: tipTitle,
+      description: tipDescription,
+    } = this.currentTip;
+
+    return {
+      title:
+        "Consejo de Trading en Oro Bótico: " + tipTitle + ". " + tipDescription,
+      meta: [
+        {
+          hid: "og:url",
+          property: "og:url",
+          content: `https://oro.ciudadbotica.com/tips/${tipId}`,
+        },
+        {
+          hid: "og:title",
+          property: "og:title",
+          name: "og:title",
+          content: tipTitle,
+        },
+        {
+          hid: "og:description",
+          property: "og:description",
+          name: "og:description",
+          content: tipDescription,
+        },
+        {
+          hid: "title",
+          property: "title",
+          name: "title",
+          content: tipTitle,
+        },
+        {
+          hid: "description",
+          name: "description",
+          content: tipDescription,
+        },
+        {
+          hid: "keywords",
+          name: "keywords",
+          content: tipDescription.join(", "),
+        },
+      ],
+    };
+  },
+
   data() {
     const tipId = this.$route.params.id;
     return {

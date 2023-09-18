@@ -41,7 +41,10 @@
     </div>
 
     <div class="App-xxs-box pt-12 mt-15 mx-auto text-dark">
-      <h3 class="mb-15">COMPARTE ESTE INCREÍBLE CONOCIMIENTO</h3>
+      <h3 class="mb-15">
+        ¡Comparte la riqueza de conocimientos de Oro Bótico y únete a nuestra
+        comunidad de éxito! 💡💪✨
+      </h3>
 
       <!-- Sharing Button -->
       <div class="text-center">

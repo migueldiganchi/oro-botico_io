@@ -75,7 +75,8 @@ html {
 }
 
 .icon-holder {
-  max-width: 270px;
+  max-width: 244px;
+
   img {
     width: 100%;
   }
@@ -277,7 +278,7 @@ html {
 .App-footer {
   @include border-radius-dots(99%, 99%, 0, 0);
   background-color: #fff !important;
-  border-top: solid 1px #c9c9c999;
+  border-top: solid 0.9px $amber;
   @media screen and (max-width: 333px) {
     @include border-radius-dots(72.9px, 72.9px, 0, 0);
   }
@@ -693,8 +694,12 @@ ul.v-breadcrumbs.screen-path {
   }
 }
 
-.v-app-bar {
+header.v-app-bar {
   padding: 0 6px !important;
+
+  &.v-toolbar {
+    border-bottom: solid 0.9px $amber !important;
+  }
 
   .v-toolbar__content {
     .v-toolbar__title {
@@ -856,7 +861,7 @@ ul.v-breadcrumbs.screen-path {
   border-radius: 33px;
   -moz-border-radius: 33px;
   -webkit-border-radius: 33px;
-  border: solid 1px #c1c1c133;
+  border: solid 1px $amber !important;
   -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.24);
   -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.24);
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.24);

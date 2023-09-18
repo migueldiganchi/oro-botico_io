@@ -784,7 +784,7 @@
         <small
           ><nuxt-link
             class="ma-2 text-dark"
-            active-class="text-gold font-weight-bold"
+            active-class="font-weight-bold"
             to="/"
             exact=""
             >Inicio</nuxt-link
@@ -793,7 +793,7 @@
         <small
           ><nuxt-link
             class="ma-2 text-dark"
-            active-class="text-gold font-weight-bold"
+            active-class="font-weight-bold"
             to="/about"
             >Nosotros</nuxt-link
           ></small
@@ -801,7 +801,7 @@
         <small
           ><nuxt-link
             class="ma-2 text-dark"
-            active-class="text-gold font-weight-bold"
+            active-class="font-weight-bold"
             to="/terms"
             >Condiciones de Uso</nuxt-link
           ></small
@@ -809,7 +809,7 @@
         <small
           ><nuxt-link
             class="ma-2 text-dark"
-            active-class="text-gold font-weight-bold"
+            active-class="font-weight-bold"
             to="/privacy"
             >Políticas de Privacidad</nuxt-link
           ></small
@@ -817,7 +817,7 @@
         <small
           ><nuxt-link
             class="ma-2 text-dark"
-            active-class="text-gold font-weight-bold"
+            active-class="font-weight-bold"
             to="/qa"
             >Preguntas Frecuentes</nuxt-link
           ></small

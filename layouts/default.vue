@@ -981,7 +981,7 @@ export default {
 
     authenticatedUserPictureUrl() {
       return (
-        this.authenticatedUser?.picutureUrl ||
+        this.authenticatedUser?.pictureUrl ||
         require("~/assets/media/user.png")
       );
     },

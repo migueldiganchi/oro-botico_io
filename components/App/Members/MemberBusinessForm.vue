@@ -1,7 +1,10 @@
 <template>
   <v-card :disabled="isWaiting" class="pb-9" :elevation="disabled ? '' : '3'">
-    <div class="d-flex bg-tr-white align-center pa-3 pl-6 radius_36 mb-9">
-      <h4 class="text-dark">Información Elite</h4>
+    <div
+      class="d-flex black align-center pa-3 pl-6 radius_36 mb-9"
+      style="border-bottom: solid 1px #c9c9c936 !important"
+    >
+      <h4 class="text-light">Información Elite</h4>
       <v-spacer />
       <v-btn
         icon

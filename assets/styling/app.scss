@@ -1288,3 +1288,7 @@ header.v-app-bar {
     }
   }
 }
+
+.v-card.notification-card {
+  border: solid 1px $amber !important;
+}

@@ -11,12 +11,12 @@ export default [
     name: "Colombia",
     flag: "colombia.png",
   },
-  // {
-  //   _id: 3,
-  //   key: "chi",
-  //   name: "Chile",
-  //   flag: "chile.png",
-  // },
+  {
+    _id: 3,
+    key: "chi",
+    name: "Chile",
+    flag: "chile.png",
+  },
   // {
   //   _id: 4,
   //   key: "per",

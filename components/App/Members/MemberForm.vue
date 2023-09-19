@@ -1,15 +1,22 @@
 <template>
-  <v-card :disabled="isWaiting" class="pb-9" :elevation="disabled ? '' : '3'">
+  <v-card
+    :disabled="isWaiting"
+    :elevation="disabled ? '' : '3'"
+    dark
+    color="dark"
+    class="pb-9"
+  >
     <div
-      class="d-flex bg-tr-white  align-center pa-3 pl-6 radius_36 mb-9"
+      class="d-flex black align-center pa-3 pl-6 radius_36 mb-9"
+      style="border-bottom: solid 1px #c9c9c936 !important"
     >
-      <h4 class="text-dark">Información Personal</h4>
+      <h4 class="text-light">Información Personal</h4>
       <v-spacer />
       <v-btn
         icon
         elevation="3"
         outlined
-        class="bg-dark "
+        class="bg-dark"
         @click="disabled = !disabled"
       >
         <v-icon v-if="disabled">mdi-pencil</v-icon>
@@ -39,14 +46,11 @@
             :is-uploading="isWaiting"
             :file="file"
             :disabled="isWaiting"
-            caption="Subir"
             @onSelectedFile="uploadFile"
+            caption="Subir"
           />
 
-          <p
-            v-if="!disabled"
-            class="ma-0 mt-3  App-xxs-box mx-auto"
-          >
+          <p v-if="!disabled" class="ma-0 mt-3 App-xxs-box mx-auto">
             <small>Sube una imagen si deseas cambiar tu foto de perfil</small>
           </p>
         </div>
@@ -62,6 +66,7 @@
             outlined
             color="amber"
             label="Nombre"
+            @input="isValid('name')"
           />
 
           <!-- Name Input Validation -->
@@ -72,11 +77,13 @@
         <div class="mb-4">
           <v-text-field
             v-model="form.phone"
+            :error="phoneErrors.length > 0"
             :disabled="isWaiting || disabled"
             rounded
             outlined
             color="amber"
             label="Teléfono / Whatsapp"
+            @input="isValid('phone')"
           />
 
           <!-- Phone Input Validation -->
@@ -176,8 +183,12 @@
             <small class="text-gold"
               ><b>IMPORTANTE</b>: Si deseas modificar el
               <b>correo electrónico</b> con el que registraste la cuenta, por
-              favor escríbenos a <b>info@Oro Bótico.com</b>, o también a
-              <b>hello@ciudadbotica.com</b></small
+              favor escríbenos a
+              <a
+                href="mailto:hello@ciudadbotica.com?subject=Quiero ser parte de Oro Bótico&body=Me interesa registrarme en el Club de Enseñanza Gratuita de Trading"
+                style="text-decoration: none"
+                ><b class="text-gold">hello@ciudadbotica.com</b></a
+              ></small
             >
           </p>
         </div>
@@ -190,11 +201,11 @@
           type="submit"
           rounded
           outlined
-          class="pl-2 bg-gold "
+          class="pl-2 bg-gold"
           elevation="3"
         >
           <span>
-            <v-icon class="mr-2 google-icon ">mdi-check</v-icon>
+            <v-icon class="mr-2 google-icon">mdi-check</v-icon>
             <span class="">Guardar</span>
           </span>
         </v-btn>

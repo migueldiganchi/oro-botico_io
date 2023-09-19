@@ -22,7 +22,7 @@
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "@nuxtjs/recaptcha": "^1.1.2",
     "dotenv": "^16.1.0",
-    "firebase": "^7.24.0",
+    "firebase": "^9.14.0",
     "js-cookie": "^3.0.5",
     "nuxt": "^2.16.3",
     "tiptap-vuetify": "^2.24.0",

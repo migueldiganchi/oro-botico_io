@@ -1,5 +1,5 @@
 <template>
-  <v-card light>
+  <v-card light class="notification-card">
     <v-card-body class="red">
       <v-card-title
         class="pl-4 text-left text-dark"

@@ -77,9 +77,9 @@
           style="max-width: 540px"
         >
           <h1 class="text-thin">
-            <b>Miles de personas están mejorando sus vidas</b> con esta nueva
-            <b>explosión tecnológica</b> que les permite
-            <b>generar ingresos usando solamente su teléfono móvil</b>.
+            Descubre cómo esta tecnología está <b>transformando la economía
+            global</b> y brindando <b>nuevas oportunidades</b> a aquellos que se aventuran
+            en <b>el mundo de las criptomonedas</b>
           </h1>
         </div>
       </v-col>
@@ -331,7 +331,7 @@ export default {
 
   computed: {
     mainBackgroundUrl() {
-      return require("~/assets/media/mobile-money.jpg");
+      return require("~/assets/media/bitcoin.jpg");
     },
 
     moneyMachineUrl() {

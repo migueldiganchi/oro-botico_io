@@ -53,7 +53,7 @@ export default {
         : this.isSuperAuthenticated // SUPER USER
         ? "Socio de Oro Bótico"
         : this.isAuthenticated // SIMPLE USER
-        ? "Entérate de las novedades de Oro Bótico y gestiona los datos de tu perfil"
+        ? "Administra tu Panel de Control en Oro Bótico"
         : "[]";
     },
 

@@ -269,6 +269,7 @@
             v-if="isNotificationListOpen"
             :notifications="notifications"
             :is-waiting="isWaiting"
+            @onShowNotification="showNotification"
           />
 
           <div v-if="notifications.length < 1">
@@ -761,6 +762,16 @@
       </AssistantDialog>
     </div>
 
+    <!-- Notification Dialog -->
+    <div v-if="notificationToShow">
+      <notification-dialog
+        :is-active="isNotificationDialogOpened"
+        :notification="notificationToShow"
+        @onClose="closeNotificationDialog"
+        @onToggleReading="toggleReading"
+      />
+    </div>
+
     <!-- Page Footer -->
     <div
       class="App-footer elevation-6 white--text text-center d-block pa-15 bg-tr-white"
@@ -845,6 +856,10 @@ export default {
     this.$bus.$on("toggle-sharing", this.toggleSharing);
     this.$bus.$on("toggle-glass", this.toggleGlass);
     this.$bus.$on("load-auth-user", this.loadAuthUser);
+
+    this.$bus.$on("open-notification-dialog", this.openNotificationDialog);
+    this.$bus.$on("toggle-notification-reading", this.toggleReading);
+    this.$bus.$on("remove-notification", this.removeNotification);
   },
 
   beforeDestroy() {
@@ -859,6 +874,10 @@ export default {
     this.$bus.$off("toggle-sharing");
     this.$bus.$off("toggle-glass");
     this.$bus.$off("load-auth-user");
+
+    this.$bus.$off("open-notification-dialog");
+    this.$bus.$off("toggle-notification-reading");
+    this.$bus.$off("remove-notification");
 
     // Recaptcha
     this.$recaptcha.destroy();
@@ -900,10 +919,25 @@ export default {
     isConfirmationOpened: false,
     waitingMessage: "",
     isOnTop: true,
-    botIsActive: false,
     isFloatingButtonsVisible: true,
     isSharing: false,
+    isDrawerLeftOpen: null,
+    isDrawerRightOpen: null,
+    isPresentationOpen: true,
+    isStepperOpen: false,
+    isWhatsappDialogOpen: false,
+    isMessengerDialogOpen: false,
+    isInstagramDialogOpen: false,
+    isNotificationListOpen: false,
+    isNotificationDialogOpened: false,
+    notificationToShow: null,
     urlToShare: "",
+    step: 1,
+    right: false,
+    left: false,
+    isGlassOpened: false,
+    information: null,
+    notifications: [],
     stepTitles: {
       step1: "Conecta",
       step2: "Enseña",
@@ -914,20 +948,6 @@ export default {
       description2: `Tu asistente virtual se convierte en tu aliado educativo. Puedes programarlo para enseñar lecciones, responder preguntas y proporcionar información relevante. Tus alumnos tendrán acceso a un tutor virtual disponible las 24 horas.`,
       description3: `AAprovecha al máximo tu asistente virtual para aumentar tus ingresos. Ofrece cursos adicionales, vende material de estudio y permite que tu asistente realice ventas en automático. Esto significa más ganancias para ti sin esfuerzo adicional.`,
     },
-    step: 1,
-    isDrawerLeftOpen: null,
-    isDrawerRightOpen: null,
-    isPresentationOpen: true,
-    isStepperOpen: false,
-    isWhatsappDialogOpen: false,
-    isMessengerDialogOpen: false,
-    isInstagramDialogOpen: false,
-    isNotificationListOpen: false,
-    right: false,
-    left: false,
-    isGlassOpened: false,
-    information: null,
-    notifications: [],
     botSidebarItems: [
       {
         avatar: "https://cdn.vuetifyjs.com/images/lists/1.jpg",
@@ -981,8 +1001,7 @@ export default {
 
     authenticatedUserPictureUrl() {
       return (
-        this.authenticatedUser?.pictureUrl ||
-        require("~/assets/media/user.png")
+        this.authenticatedUser?.pictureUrl || require("~/assets/media/user.png")
       );
     },
 
@@ -1181,6 +1200,10 @@ export default {
   },
 
   methods: {
+    showNotification(notification) {
+      this.$bus.$emit("open-notification-dialog", notification);
+    },
+
     handlePhrasesDisplayer() {
       if (!document) {
         return;
@@ -1462,6 +1485,54 @@ export default {
       this.$nextTick(() => {
         this.isConfirmationOpened = false;
       });
+    },
+
+    // Notification
+    openNotificationDialog(notification) {
+      this.notificationToShow = notification;
+      setTimeout(async () => {
+        if (!notification.readAt) {
+          await this.toggleReading(notification._id);
+        }
+        this.isNotificationDialogOpened = true;
+      }, 666);
+    },
+
+    closeNotificationDialog() {
+      this.isNotificationDialogOpened = false;
+      setTimeout(() => {
+        this.notificationToShow = null;
+      }, 666);
+    },
+
+    toggleReading(notificationId) {
+      return this.$store
+        .dispatch("toggleReading", {
+          token: this.authenticatedToken,
+          notificationId,
+        })
+        .then((notification) => {
+          console.log("[notification]", notification);
+          this.$notify({
+            message: "La notificación se ha actualizado correctamente",
+            color: "info",
+          });
+
+          this.notificationToShow = { ...notification };
+
+          this.$bus.$emit("load-notifications");
+
+          if (this.isNotificationDialogOpened) {
+            this.closeNotificationDialog();
+          }
+        })
+        .catch((error) => {
+          console.log("[error]", error);
+          this.$notify({
+            message: "Ha ocurrido un inconveniente al marcar la 'lectura'",
+            color: "red",
+          });
+        });
     },
   },
 };

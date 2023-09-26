@@ -73,7 +73,7 @@
               x-large
               elevation="3"
               style="background-color: #1877f2"
-              href="https://facebook.com/cristian.escobar"
+              href="https://facebook.com/oro.botico"
               target="_blank"
             >
               <v-icon color="white">mdi-facebook</v-icon>
@@ -95,13 +95,6 @@
         <v-icon style="margin-top: 1.8px" class="mr-2">mdi-star</v-icon>
         <span style="margin-top: 1px"> Visitar Landing </span>
       </v-btn>
-
-      <p class="mt-15 mx-auto App-xxs-box">
-        <small
-          ><b>¡ATENCIÓN!</b> <br />Cada una de estas acciones abre una nueva
-          ventana con la información de <b>Cristian Escobar</b>
-        </small>
-      </p>
     </div>
   </page>
 </template>

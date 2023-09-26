@@ -11,9 +11,7 @@
         <div
           class="py-16 mb-16 mt-3 mx-auto text-center App-xxs-box px-3 px-sm-9"
         >
-          <v-icon
-            style="font-size: 108px; opacity: 0.63"
-            class="mb-6 text-gold"
+          <v-icon style="font-size: 108px; opacity: 0.63" class="mb-6 text-gold"
             >mdi-bell-off-outline</v-icon
           >
           <h5 style="opacity: 0.63" class="px-3 text-gold">
@@ -31,7 +29,7 @@
           <v-btn
             :loading="isWaiting"
             rounded
-            class=" bg-gradient"
+            class="bg-gradient"
             outlined
             elevation="3"
             @click="loadNotifications(notificationsNextPage)"
@@ -67,25 +65,6 @@ export default {
       notificationsTotalPages: 0,
       notificationsNextPage: 0,
       notificationToRemoveId: null,
-
-      breadcrumbItems: [
-        {
-          text: "Inicio",
-          icon: "mdi-home-heart",
-          to: "/",
-        },
-        {
-          text: "Panel de Control",
-          icon: "mdi-gamepad",
-          to: "/dashboard",
-        },
-        {
-          text: "Notificaciones",
-          icon: "mdi-bell",
-          to: "/dashboard/notifications",
-          disabled: true,
-        },
-      ],
     };
   },
   computed: {
@@ -95,16 +74,6 @@ export default {
 
     isWaiting() {
       return this.waitingMessage != "";
-    },
-
-    pageTitle() {
-      return "Notificaciones";
-    },
-
-    pageDescription() {
-      return this.isWaiting
-        ? this.waitingMessage
-        : "Mensajes desde la plataforma Oro Bótico";
     },
   },
 
@@ -131,6 +100,7 @@ export default {
           this.notificationsNextPage = nextPage;
         })
         .catch((error) => {
+          console.error("[error]", error);
           this.$notify({
             message:
               "Ha ocurrido un inconveniente al cargar las notificaciones",
@@ -174,72 +144,3 @@ export default {
   },
 };
 </script>
-
-<!-- <script>
-export default {
-  middleware: ["auth"],
-
-  asyncData({ store, env }) {
-    const notificationList = [
-      {
-        _id: 1,
-        title: "Actualización",
-        description:
-          "El partner 'Luis Cavadini' ha modificado su perfil y necesita aprobación",
-      },
-      {
-        _id: 2,
-        title: "Actualización",
-        description:
-          "El partner 'Jorge Nuñez' ha modificado su perfil y necesita aprobación",
-      },
-      {
-        _id: 3,
-        title: "Eliminación",
-        description:
-          "El partner 'Jorge Nuñez' ha solicitado dar de baja su cuenta",
-      },
-    ];
-
-    return {
-      notifications: notificationList,
-    };
-  },
-  data: () => ({
-    waitingMessage: "",
-    breadcrumbItems: [
-      {
-        text: "Inicio",
-        icon: "mdi-home-heart",
-        to: "/",
-      },
-      {
-        text: "Panel de Control",
-        icon: "mdi-gamepad",
-        to: "/dashboard",
-      },
-      {
-        text: "Notificaciones",
-        icon: "mdi-bell",
-        to: "/dashboard/notifications",
-        disabled: true,
-      },
-    ],
-  }),
-  computed: {
-    isWaiting() {
-      return this.waitingMessage != "";
-    },
-
-    pageTitle() {
-      return "Notificaciones";
-    },
-
-    pageDescription() {
-      return this.isWaiting
-        ? this.waitingMessage
-        : "Mensajes desde la plataforma Oro Bótico";
-    },
-  },
-};
-</script> -->

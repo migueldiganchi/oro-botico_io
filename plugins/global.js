@@ -14,6 +14,7 @@ import Step2Form from "~/components/App/UI/Forms/Steps/Step2Form.vue";
 import Step3Form from "~/components/App/UI/Forms/Steps/Step3Form.vue";
 
 // Dialogs
+import NotificationDialog from "~/components/App/UI/Dialogs/NotificationDialog.vue";
 import InformationDialog from "~/components/App/UI/Dialogs/InformationDialog.vue";
 import ConfirmationDialog from "~/components/App/UI/Dialogs/ConfirmationDialog.vue";
 import AssistantDialog from "~/components/App/UI/Dialogs/AssistantDialog.vue";
@@ -94,6 +95,7 @@ const components = {
   Step3Form,
 
   AssistantDialog,
+  NotificationDialog,
   InformationDialog,
   ConfirmationDialog,
   ColorPickerDialog,

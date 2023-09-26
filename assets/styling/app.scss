@@ -1091,41 +1091,6 @@ header.v-app-bar {
   }
 }
 
-.App-glass {
-  // @include bg-tr;
-  // position: fixed !important;
-  // z-index: 6 !important;
-  // bottom: 0 !important;
-  // right: 0 !important;
-  // left: 0 !important;
-  // top: 0 !important;
-}
-
-// .typewriter-cursor {
-//   animation: blink-caret 0.75s step-end infinite;
-//   -webkit-animation: blink-caret 0.75s step-end infinite;
-// }
-
-// @keyframes blink-caret {
-//   from,
-//   to {
-//     border-color: transparent;
-//   }
-//   50% {
-//     border-color: #333;
-//   }
-// }
-
-// @-webkit-keyframes blink-caret {
-//   from,
-//   to {
-//     border-color: transparent;
-//   }
-//   50% {
-//     border-color: #333;
-//   }
-// }
-
 @keyframes blink-caret {
   from,
   to {

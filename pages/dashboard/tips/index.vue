@@ -66,7 +66,7 @@ export default {
         to: "/",
       },
       {
-        text: "Panel de Control",
+        text: "Mi Panel",
         icon: "mdi-gamepad",
         to: "/dashboard",
       },

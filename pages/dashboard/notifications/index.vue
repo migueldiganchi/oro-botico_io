@@ -65,8 +65,27 @@ export default {
       notificationsTotalPages: 0,
       notificationsNextPage: 0,
       notificationToRemoveId: null,
+      breadcrumbItems: [
+        {
+          text: "Inicio",
+          icon: "mdi-home-heart",
+          to: "/",
+        },
+        {
+          text: "Mi Panel",
+          icon: "mdi-gamepad",
+          to: "/dashboard",
+        },
+        {
+          text: "Notificaciones",
+          icon: "mdi-bell",
+          to: "/dashboard/notifications",
+          disabled: true,
+        },
+      ],
     };
   },
+
   computed: {
     isAuthenticated() {
       return this.$store.getters.isAuthenticated;
@@ -74,6 +93,14 @@ export default {
 
     isWaiting() {
       return this.waitingMessage != "";
+    },
+
+    pageTitle() {
+      return "Notificaciones";
+    },
+
+    pageDescription() {
+      return "Historial de las Notificaciones en Sustentopia";
     },
   },
 

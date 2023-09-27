@@ -5,31 +5,32 @@
     transition="dialog-top-transition"
     max-width="450"
   >
-    <v-card class="white">
+    <v-card light>
       <!-- begin:: Notification title -->
-      <v-card-title class="text-center d-block text-h6 text-gold" :class="headerClass">
-        <h2 v-if="notificationIcon" class="m-0 my-3">
-          <v-icon class="text-h3">{{ notificationIcon }}</v-icon>
+      <v-card-title class="text-center d-block text-h6 pb-6" :class="headerClass">
+        <h2 v-if="notificationIcon" class="mt-3 mb-6">
+          <v-icon class="text-h2" :class="`${notificationColor}--text`">{{
+            notificationIcon
+          }}</v-icon>
         </h2>
         <b>{{ notification?.title }}</b>
       </v-card-title>
       <!-- end:: Notification title -->
 
       <!-- begin:: Notification messge -->
-      <v-card-text
-        class="text-center mt-5"
-        :class="`${notificationColor}--text`"
-      >
-        <div v-html="notification?.message" style="font-size: 18px" />
+      <v-card-text class="text-center mt-9 pb-3">
+        <div
+          v-html="notification?.message"
+          style="font-size: 18px"
+          class="black--text"
+        />
       </v-card-text>
       <!-- end:: Confirmation content -->
 
       <!-- begin:: Reading details -->
-      <div v-if="notification?.readAt" class="mx-6 mb-3 text-center">
-        <small :class="`${notificationColor}--text`"
-          >Leído&nbsp;<v-icon
-            :class="`${notificationColor}--text`"
-            style="font-size: 14.4px"
+      <div v-if="notification?.readAt" class="mx-6 mb-9 text-center">
+        <small class="grey--text"
+          >Leído&nbsp;<v-icon class="grey--text" style="font-size: 14.4px"
             >mdi-eye</v-icon
           >&nbsp;
           <b>{{
@@ -43,12 +44,13 @@
       <v-card-actions class="pa-3 bg-tr" :class="footerClass">
         <!-- begin:: Cancel buttom -->
         <v-btn
-          color="bg-gold"
+          :color="notificationColor"
           @click.prevent.stop="close()"
           rounded
+          text
           :loading="isLoading"
         >
-          <span :class="`${notificationColor}--text`">
+          <span class="white--text">
             <v-icon>mdi-close</v-icon>
             Cerrar
           </span>
@@ -60,7 +62,7 @@
         <!-- begin:: Ok button -->
         <v-btn
           v-if="notification.readAt"
-          color="bg-gold"
+          color="white"
           @click="toggleReading()"
           rounded
           :loading="isLoading"
@@ -103,7 +105,7 @@ export default {
     notificationColor() {
       switch (this.notification?.kind) {
         case "success":
-          return "#d1a837";
+          return "green";
         case "danger":
           return "red";
         case "warning":
@@ -115,7 +117,7 @@ export default {
       }
     },
     headerClass() {
-      return `${this.notificationColor} lighten-4 ${this.notificationColor}--text`;
+      return `${this.notificationColor} lighten-5 ${this.notificationColor}--text`;
     },
     footerClass() {
       return `${this.notificationColor} darken-1`;

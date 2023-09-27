@@ -1077,7 +1077,7 @@ export default {
             },
           },
           {
-            title: "Panel de Control",
+            title: "Mi Panel",
             icon: "mdi-gamepad",
             to: "/dashboard",
           },
@@ -1105,7 +1105,7 @@ export default {
         leftMenuItems = [
           { title: "Inicio", icon: "mdi-home-heart", to: "/" },
           {
-            title: "Panel de Control",
+            title: "Mi Panel",
             icon: "mdi-gamepad",
             to: "/dashboard",
           },

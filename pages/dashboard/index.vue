@@ -22,7 +22,7 @@ export default {
         to: "/",
       },
       {
-        text: "Panel de Control",
+        text: "Mi Panel",
         icon: "mdi-gamepad",
         to: "/dashboard",
         disabled: true,
@@ -44,7 +44,7 @@ export default {
     },
 
     pageTitle() {
-      return "Panel de Control";
+      return "Mi Panel";
     },
 
     pageDescription() {
@@ -53,7 +53,7 @@ export default {
         : this.isSuperAuthenticated // SUPER USER
         ? "Socio de Oro Bótico"
         : this.isAuthenticated // SIMPLE USER
-        ? "Administra tu Panel de Control en Oro Bótico"
+        ? "Administra tu Mi Panel en Oro Bótico"
         : "[]";
     },
 

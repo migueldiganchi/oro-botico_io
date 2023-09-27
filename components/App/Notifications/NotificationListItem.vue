@@ -4,9 +4,9 @@
     :dark="notification.readAt ? false : true"
     :color="notification.readAt ? 'white' : notification.kind"
   >
-    <v-list-item :key="notification.title">
+    <v-list-item :key="notification.title" class="px-2">
       <!-- FROM AVATAR -->
-      <v-list-item-avatar>
+      <v-list-item-avatar class="mr-2">
         <v-img :src="fromUrl" :title="fromName" />
       </v-list-item-avatar>
 
@@ -30,35 +30,11 @@
             >{{ new Date(notification.createdAt).toLocaleDateString() }}</small
           >
         </v-list-item-title>
-
-        <!-- MESSAGE -->
-        <v-list-item-subtitle v-if="notification.readAt">
-          <i><v-icon style="font-size: 18px !important">mdi-eye</v-icon></i>
-          <span class="text--primary">
-            Leído =>
-            {{ $moment(notification.readAt).format("DD/MM/YYYY hh:mm") }}</span
-          >
-          &mdash;
-          <span v-html="notification.message" />
-        </v-list-item-subtitle>
       </v-list-item-content>
 
       <!-- ACTIONS FOR NOTIFICATION -->
       <v-list-item-action class="d-inline-block">
-        <v-tooltip v-if="notification.readAt" top color="#d1a837">
-          <template v-slot:activator="{ on, attrs }">
-            <v-btn
-              icon
-              v-bind="attrs"
-              v-on="on"
-              @click="startRemove(notification)"
-              ><v-icon>mdi-delete</v-icon>
-            </v-btn>
-          </template>
-          <span>Eliminar</span>
-        </v-tooltip>
-
-        <v-tooltip v-if="notification.readAt" top color="green">
+        <v-tooltip v-if="notification.readAt" top color="amber">
           <template v-slot:activator="{ on, attrs }">
             <v-btn icon v-bind="attrs" v-on="on" @click="show(notification)"
               ><v-icon>mdi-eye-remove</v-icon>

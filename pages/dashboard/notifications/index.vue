@@ -22,7 +22,10 @@
 
       <!-- Notifications -->
       <div v-if="notifications.length">
-        <notification-cards :notifications="notifications" />
+        <notification-cards
+          :notifications="notifications"
+          @onNotificationShow="showNotification"
+        />
 
         <!-- Loader button -->
         <div v-if="notificationsNextPage" class="text-center mt-6">
@@ -125,6 +128,10 @@ export default {
           this.notificationsTotalRecords = total;
           this.notificationsTotalPages = totalPages;
           this.notificationsNextPage = nextPage;
+
+          this.notificationsUnread = notifications.filter(
+            (n) => n.readAt === null
+          );
         })
         .catch((error) => {
           console.error("[error]", error);

@@ -8,7 +8,7 @@
       }"
       class="notification-set_item"
     >
-      <notification-card :notification="notification" />
+      <notification-card :notification="notification" @onShow="show" />
     </div>
   </div>
 </template>
@@ -19,6 +19,12 @@ export default {
     notifications: {
       type: Array,
       default: () => [],
+    },
+  },
+
+  methods: {
+    show(notificationToShow) {
+      this.$emit("onNotificationShow", notificationToShow);
     },
   },
 };

@@ -162,7 +162,19 @@
 
       <!-- Notifications -->
       <v-btn icon color="#d1a837" class="ml-1" @click="toggleNotifications()">
-        <v-icon style="font-size: 27.9px">mdi-bell</v-icon>
+        <v-badge
+          v-if="notificationsUnread.length"
+          :content="notificationsUnread.length"
+          bottom
+          left
+          offset-x="10"
+          offset-y="10"
+          color="warning"
+        >
+          <v-icon style="font-size: 27.9px">mdi-bell</v-icon>
+        </v-badge>
+
+        <v-icon v-else style="font-size: 27.9px">mdi-bell</v-icon>
       </v-btn>
     </v-app-bar>
 
@@ -267,15 +279,15 @@
         <div v-if="isAuthenticated">
           <notification-list
             v-if="isNotificationListOpen"
-            :notifications="notifications"
+            :notifications="notificationsUnread"
             :is-waiting="isWaiting"
             @onShowNotification="showNotification"
           />
 
-          <div v-if="notifications.length < 1">
+          <div v-if="notificationsUnread.length < 1">
             <div class="py-5 text-center text-gold">
               <v-icon size="72px" class="text-gold">mdi-bell</v-icon>
-              <p class="mt-5">No se han encontrado notificaciones</p>
+              <p class="mt-5">No se han encontrado notificaciones nuevas</p>
             </div>
           </div>
         </div>
@@ -937,6 +949,7 @@ export default {
     left: false,
     isGlassOpened: false,
     information: null,
+    notificationsUnread: [],
     notifications: [],
     stepTitles: {
       step1: "Conecta",
@@ -1269,6 +1282,9 @@ export default {
         })
         .then(({ notifications }) => {
           this.notifications = notifications;
+          this.notificationsUnread = notifications.filter(
+            (n) => n.readAt === null
+          );
         })
         .catch((error) => {
           console.error("[error]", error);
@@ -1519,6 +1535,8 @@ export default {
           });
 
           this.notificationToShow = { ...notification };
+
+          this.loadNotifications();
 
           this.$bus.$emit("load-notifications");
 

@@ -69,6 +69,11 @@ import MemberList from "~/components/App/Members/MemberList";
 import MemberCard from "~/components/App/Members/MemberCard";
 import Member from "~/components/App/Members/Member.vue";
 
+// Assistants
+import AssistantForm from "~/components/App/Assistants/AssistantForm";
+import AssistantList from "~/components/App/Assistants/AssistantList";
+import AssistantCard from "~/components/App/Assistants/AssistantCard";
+
 // File management
 import FileManager from "@/components/App/Files/FileManager";
 import FileUploader from "@/components/App/Files/FileUploader";
@@ -131,6 +136,10 @@ const components = {
   MemberList,
   MemberCard,
   Member,
+
+  AssistantForm,
+  AssistantList,
+  AssistantCard,
 
   NotificationSnack,
   Notification,

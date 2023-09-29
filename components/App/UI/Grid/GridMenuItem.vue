@@ -2,7 +2,7 @@
   <v-row class="pa-0 ma-0 text-flat" align="center" justify="center">
     <v-col cols="12" class="pa-0 mx-0 mb-3">
       <span class="text-center app-menu-item-card-icon">
-        <v-icon class="text-h1" :color="item.color">{{ item.icon }}</v-icon>
+        <v-icon class="text-h2" :color="item.color">{{ item.icon }}</v-icon>
       </span>
     </v-col>
     <v-col cols="12" class="pa-0 ma-0">

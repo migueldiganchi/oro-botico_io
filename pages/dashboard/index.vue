@@ -5,7 +5,9 @@
     :description="pageDescription"
     :breadcrumbs="breadcrumbItems"
   >
-    <grid-menu :items="menuItems" />
+    <div class="App-sm-box">
+      <grid-menu :items="menuItems" />
+    </div>
   </page>
 </template>
 
@@ -104,6 +106,12 @@ export default {
               title: "Notificaciones",
               icon: "mdi-bell",
               to: "/dashboard/notifications",
+            },
+            {
+              key: "3",
+              title: "Asistentes",
+              icon: "mdi-robot",
+              to: "/dashboard/assistants",
             },
             {
               key: "1",

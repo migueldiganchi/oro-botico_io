@@ -26,7 +26,7 @@
         <v-spacer />
         <v-btn
           class="bg-instagram"
-          href="https://instagram.com/livecommunity.official"
+          href="https://instagram.com/neutron.bot"
           target="_blank"
           rounded
           elevation="3"

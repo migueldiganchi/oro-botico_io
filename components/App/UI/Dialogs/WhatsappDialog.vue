@@ -93,7 +93,7 @@ export default {
       });
     },
     getLinkWhastapp(message) {
-      const number = "+5493518089847";
+      const number = "+5491135077622";
       var url =
         "https://api.whatsapp.com/send?phone=" +
         number +

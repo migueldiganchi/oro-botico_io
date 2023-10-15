@@ -120,8 +120,6 @@ export default {
   },
 
   head() {
-    console.log("[this.currentTip]", this.currentTip);
-
     if (!this.robot) {
       console.log("[this robot does not exist]");
       return;

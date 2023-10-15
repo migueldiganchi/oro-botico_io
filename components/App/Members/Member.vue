@@ -2,7 +2,7 @@
   <div
     class="member text-dark"
     :class="{
-      'active': !isMemberBoxVisible
+      active: !isMemberBoxVisible,
     }"
     @click="toggleMember"
   >
@@ -17,9 +17,7 @@
       <div class="is-circular member-image text-center">
         <v-avatar size="63px" class="pa-3">
           <v-img
-            :src="
-              require('~/assets/media/trading.png') + '?' + new Date()
-            "
+            :src="require('~/assets/media/trading.png') + '?' + new Date()"
             style="width: 126px; position: relative; top: -4.5px"
             aspect-ration="1"
           ></v-img>
@@ -37,8 +35,8 @@
       <v-card class="bg-gold pa-3 pa-sm-6" width="270px">
         <div class="d-block">
           <v-img
-            v-if="liveData.pictureUrl"
-            :src="liveData.pictureUrl"
+            v-if="oroData.pictureUrl"
+            :src="oroData.pictureUrl"
             aspect-ratio="1.45"
             width="190px"
             class="mb-6 d-inline-block"
@@ -85,10 +83,10 @@ export default {
   }),
 
   computed: {
-    liveData() {
+    oroData() {
       return {
         name: "Oro Bótico",
-        as: "Centro Virtual de entrenamiento y perfeccionamiento en Trading",
+        as: "Digitalización y Automatización para Líderes de Trading",
         pictureUrl: require("~/assets/media/trading.png") + "?" + Date.now(),
       };
     },

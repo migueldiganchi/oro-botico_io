@@ -28,8 +28,7 @@
         </div>
 
         <div v-else-if="statusAccountValidationIsFinished" class="mt-3">
-          Escríbenos a <b>livecommunity.official@gmail.com</b> para más
-          información.
+          Escríbenos a <b>hello@ciudadbotica.com</b> para más información.
 
           <div class="text-xs-center mt-9">
             <v-btn

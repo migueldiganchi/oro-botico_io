@@ -25,7 +25,7 @@
         </b>
 
         <!-- Description text -->
-        <div class="text-light mt-6 mb-3 mx-auto x-small-box">
+        <div class="text-light mt-3 mb-6 mx-auto x-small-box">
           <h3 class="text-thin">{{ description }}</h3>
         </div>
 

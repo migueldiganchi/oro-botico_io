@@ -11,7 +11,7 @@
       fab
       elevation="9"
       class="box-shadow bg-instagram left-bottom"
-      :class="{ hidden: hidden }"
+      :class="{ 'hidden-quick-button': hidden }"
     >
       <v-icon class="mt-1">mdi-instagram</v-icon>
     </v-btn>
@@ -28,7 +28,7 @@
       fab
       elevation="9"
       class="box-shadow right-bottom"
-      :class="{ hidden: hidden }"
+      :class="{ 'hidden-quick-button': hidden }"
     >
       <v-icon>mdi-whatsapp</v-icon>
     </v-btn>

@@ -559,13 +559,12 @@ ul.v-breadcrumbs.screen-path {
   .v-btn {
     font-size: 36px !important;
     padding: 15px !important;
-    // text-align: center !important;
     * {
       font-size: 36px !important;
     }
   }
   .v-btn.v-btn--contained.v-btn--fab.v-btn--fixed.v-btn--round {
-    transition: all 0.6s ease-out !important;
+    transition: all 1s ease-out !important;
     position: fixed;
   }
   .v-btn.right-top {

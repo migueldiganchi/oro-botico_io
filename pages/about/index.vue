@@ -5,20 +5,6 @@
     :description="pageDescription"
     :breadcrumbs="breadcrumbItems"
   >
-    <div v-if="true" class="my-12">
-      <v-btn
-        to="/about/team"
-        large
-        rounded
-        outlined
-        elevation="3"
-        class="bg-gold pr-2"
-      >
-        <span class="mr-2">Historias</span>
-        <v-icon>mdi-arrow-right</v-icon>
-      </v-btn>
-    </div>
-
     <div class="box mx-auto">
       <v-row style="font-size: 19.9px">
         <v-col>

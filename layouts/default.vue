@@ -684,6 +684,7 @@
         isStepperOpen ||
         isMessengerDialogOpen ||
         isWhatsappDialogOpen ||
+        isInstagramDialogOpen ||
         isDrawerLeftOpen ||
         isDrawerRightOpen
       "
@@ -1309,12 +1310,13 @@ export default {
         });
       }
 
-      const { nickname, name, description } = this.authenticatedUser;
+      const { nickname, name, description, email } = this.authenticatedUser;
       const userPictureUrl = this.authenticatedUserPictureUrl;
 
       this.openInformation({
         title: name,
-        subtitle: description,
+        description: "Correo electrónico registrado",
+        subtitle: email,
         mediaMaxWidth: "120px",
         mediaUrl: userPictureUrl + "?" + new Date(),
         pictureUrl: userPictureUrl + "?" + new Date(),

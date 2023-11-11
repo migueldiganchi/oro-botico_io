@@ -30,6 +30,18 @@
 
       <!-- Page Title -->
       <v-toolbar-title class="text-link" style="padding-left: 7.2px !important">
+        <v-btn
+          icon
+          dark
+          x-small
+          fab
+          class="bg-gold mr-3 ml-0 mb-1"
+          outlined
+          @click="betaCommunication"
+        >
+          <v-icon size="14.5px">mdi-beta</v-icon>
+        </v-btn>
+
         <span
           v-if="$route.name == 'index'"
           @click="isDrawerLeftOpen = !isDrawerLeftOpen"
@@ -1214,6 +1226,17 @@ export default {
   },
 
   methods: {
+    betaCommunication() {
+      const betaInfo = {
+        title: "¡Descubre la Beta de Oro Bótico!",
+        description:
+          "Estamos emocionados de presentar la fase beta de Oro Bótico, la plataforma pionera que lleva la educación y el entrenamiento en trading a nuevas alturas mediante el poder de la inteligencia artificial avanzada.",
+        mediaUrl: require("~/assets/media/laboratory.png"),
+      };
+
+      this.$inform(betaInfo);
+    },
+
     showNotification(notification) {
       this.$bus.$emit("open-notification-dialog", notification);
     },

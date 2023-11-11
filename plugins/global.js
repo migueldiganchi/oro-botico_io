@@ -7,6 +7,7 @@ import Castle from "~/components/Castle.vue";
 import Breadcrumbs from "~/components/App/UI/Breadcrumbs.vue";
 import Recruiter from "~/components/App/UI/Recruiter.vue";
 import ValidationErrors from "@/components/App/UI/ValidationErrors";
+import EmptyResults from "@/components/App/UI/EmptyResults";
 
 // Settings Step
 import Step1Form from "~/components/App/UI/Forms/Steps/Step1Form.vue";
@@ -94,6 +95,7 @@ const components = {
   FileUploader,
   Recruiter,
   ValidationErrors,
+  EmptyResults,
 
   Step1Form,
   Step2Form,

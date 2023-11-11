@@ -8,16 +8,10 @@
     <div class="xs-box mx-auto">
       <!-- Empty Notifications -->
       <div v-if="!notifications.length" class="mx-auto my-15">
-        <div
-          class="py-16 mb-16 mt-3 mx-auto text-center App-xxs-box px-3 px-sm-9"
-        >
-          <v-icon style="font-size: 108px; opacity: 0.63" class="mb-6 text-gold"
-            >mdi-bell-off-outline</v-icon
-          >
-          <h5 style="opacity: 0.63" class="px-3 text-gold">
-            Hasta el momento no se han encontrado notificaciones
-          </h5>
-        </div>
+        <empty-results
+          icon="mdi-bell-off-outline"
+          title="Hasta el momento no se han encontrado notificaciones"
+        />
       </div>
 
       <!-- Notifications -->

@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "engines": {
-    "node": "14.17.6",
-    "npm": "9.3.0"
+    "node": "18.x",
+    "npm": "7.x"
   },
   "scripts": {
     "dev": "nuxt --port 9969",

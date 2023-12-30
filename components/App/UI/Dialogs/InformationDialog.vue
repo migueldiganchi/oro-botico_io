@@ -79,7 +79,6 @@
             v-if="to"
             :to="to"
             class="d-inline-block bg-gold ml-2 pl-3 float-right"
-            large
             outlined
             rounded
             elevation="3"

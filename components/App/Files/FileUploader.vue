@@ -8,7 +8,6 @@
       outlined
       :rounded="caption != '-'"
       :icon="caption == '-'"
-      :large="caption == '-'"
       :class="{
         'pl-2': caption != '-',
       }"

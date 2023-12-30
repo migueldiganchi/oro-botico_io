@@ -75,7 +75,6 @@
             class="bg-gold"
             elevation="3"
             icon
-            x-large
           >
             <v-icon>mdi-check</v-icon>
           </v-btn>

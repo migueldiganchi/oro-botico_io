@@ -44,7 +44,6 @@
           :disabled="isRandoming"
           @click="newTip()"
           rounded
-          large
           class="white--text bg-gold"
         >
           <v-icon class="mr-2 mt-2">mdi-comment-arrow-right</v-icon>

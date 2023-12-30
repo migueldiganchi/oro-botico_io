@@ -8,7 +8,6 @@
       outlined
       to="/auth/new"
       type="submit"
-      large
       rounded
       elevation="3"
       class="bg-gradient text-dark pl-2"

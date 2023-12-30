@@ -129,7 +129,6 @@
               elevation="3"
               class="pl-2 pr-3"
               @click="close"
-              large
             >
               <v-icon class="primary--text">mdi-home</v-icon>
               <v-icon class="primary--text ml-2">mdi-arrow-left</v-icon>
@@ -145,7 +144,6 @@
               color="white"
               class="white mr-3"
               elevation="3"
-              large
               @click="
                 $notify({
                   color: 'primary darken-1',
@@ -164,7 +162,6 @@
               color="white"
               outlined
               elevation="3"
-              large
               class="pr-2 white"
             >
               <span class="text-dark ml-2"> Enviar</span>

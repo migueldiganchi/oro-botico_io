@@ -24,7 +24,6 @@
         <v-btn
           class="bg-gold mb-0 elevation-3"
           rounded
-          large
           icon
           @click.prevent="openInfo()"
         >
@@ -37,7 +36,6 @@
           class="mb-0 elevation-3 white ml-2"
           rounded
           color="red"
-          large
           icon
           @click="openMemberStatusForm()"
         >
@@ -49,7 +47,6 @@
           class="mb-0 elevation-3 white ml-2"
           rounded
           color="green"
-          large
           icon
           @click="openMemberStatusForm()"
         >

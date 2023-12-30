@@ -105,11 +105,11 @@
         to="/auth"
         rounded
         color="white"
-        class="mr-2 bg-gold pt-1 pl-3 d-none d-sm-flex white--text"
+        class="mr-2 bg-gold pl-3 d-none d-sm-flex white--text"
         elevation="3"
       >
         <v-icon class="mr-2 white--text">mdi-key</v-icon>
-        Entrar
+        <span>Entrar</span>
       </v-btn>
 
       <!-- Login (Mobile) -->
@@ -137,11 +137,11 @@
         outlined
         rounded
         color="white"
-        class="mx-2 bg-gold pt-1 pl-3 d-none d-sm-flex"
+        class="mx-2 bg-gold pl-3 d-none d-sm-flex"
         elevation="3"
       >
         <v-icon class="mr-2">mdi-account-plus</v-icon>
-        Registrar
+        <span>Registrar</span>
       </v-btn>
 
       <!-- Register (Mobile) -->
@@ -393,7 +393,6 @@
               class="bg-gold"
               :rounded="!isStepperOpen"
               :icon="isStepperOpen"
-              large
             >
               <v-icon v-if="!isStepperOpen" class="mr-2">mdi-flag</v-icon>
               <v-icon v-else>mdi-close</v-icon>
@@ -411,7 +410,6 @@
               rounded
               elevation="0"
               text
-              large
             >
               <v-icon class="mr-2 text-light">mdi-key</v-icon>
               <span class="text-light">Iniciar Sesión</span>
@@ -419,14 +417,14 @@
           </div>
 
           <div class="hidden-on-desktop">
-            <v-btn @click="toggleStepper()" class="bg-gold mb-3" rounded large>
+            <v-btn @click="toggleStepper()" class="bg-gold mb-3" rounded>
               <v-icon v-if="!isStepperOpen" class="mr-2">mdi-flag</v-icon>
               <v-icon v-else class="mr-2">mdi-check</v-icon>
               <span v-if="!isStepperOpen">¿Cómo funciona?</span>
               <span v-else>Listo</span>
             </v-btn>
 
-            <v-btn to="/auth" rounded large text elevation="0" class="">
+            <v-btn to="/auth" rounded text elevation="0" class="">
               <v-icon class="mr-2 text-light">mdi-key</v-icon>
               <span class="text-light">Iniciar Sesión</span>
             </v-btn>
@@ -1281,16 +1279,22 @@ export default {
               : null;
 
           const errorMessage =
-            errorStatus == 401
-              ? "Necesita autorización"
-              : errorStatus == 403
-              ? "Las credenciales para ver esta información son incorrectas"
+            errorStatus == 401 || errorStatus == 403
+              ? "Necesita autorización para continuar. Cerrando..."
               : "Ha ocurrido un inconveniente al cargar los datos del usuario";
 
           this.$notify({
             message: errorMessage,
             color: "red",
             timeout: 4500,
+            onNotify: () => {
+              if (errorStatus == 401 || errorStatus == 403) {
+                this.$router.push("/auth");
+                this.$notify({
+                  message: "Ingresa nuevamente las credenciales del sistema",
+                });
+              }
+            },
           });
         })
         .finally(() => {

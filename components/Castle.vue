@@ -54,7 +54,6 @@
           rounded
           elevation="3"
           text
-          large
         >
           <v-icon class="mr-2 text-light">mdi-share-variant</v-icon>
           <span class="text-light">Compartir</span>
@@ -151,7 +150,6 @@
     <div v-if="$route.name != 'm-nickname'" class="mb-12">
       <v-btn
         to="/about/team"
-        large
         rounded
         outlined
         elevation="3"

@@ -13,7 +13,7 @@
     </v-row>
 
     <div v-if="showMoreButton" class="mt-6">
-      <v-btn @click="loadMore()" rounded class="pl-3 text-dark" large>
+      <v-btn @click="loadMore()" rounded class="pl-3 text-dark">
         <v-icon class="mr-2">mdi-plus</v-icon>
         <span>{{ loading ? "Cargando..." : "Cargar más" }}</span>
       </v-btn>

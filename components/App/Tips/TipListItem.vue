@@ -39,7 +39,6 @@
         :disabled="loading"
         class="text-light"
         text
-        large
       >
         <v-icon>mdi-share-variant</v-icon>
       </v-btn>

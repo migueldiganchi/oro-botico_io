@@ -18,7 +18,6 @@
             elevation="3"
             outlined
             dark
-            large
           >
             <span>
               <v-icon>mdi-key</v-icon>
@@ -38,7 +37,6 @@
               elevation="3"
               outlined
               dark
-              large
             >
               <v-icon class="text-dark">mdi-home</v-icon>
               <span class="ml-3 text-dark">Ir al Inicio</span>
@@ -51,7 +49,6 @@
               elevation="3"
               outlined
               dark
-              large
             >
               <v-icon class="text-dark">mdi-key</v-icon>
               <span class="ml-3 text-dark">Iniciar Sesión</span>

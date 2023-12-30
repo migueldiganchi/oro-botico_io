@@ -365,15 +365,47 @@ html {
   opacity: 0 !important;
 }
 
+// .v-btn:not(.v-btn--icon) {
+//   .v-btn__content {
+//     display: flex;
+//     align-items: center;
+//     i {
+//       border: solid 1px blue;
+//     }
+//     span {
+//       align-self: center;
+//       display: inline-block;
+//       vertical-align: middle;
+//       border: solid 1px green;
+//     }
+//   }
+// }
+
 .v-btn:not(.v-btn--icon) {
-  padding-bottom: 4.5px !important;
+  padding-bottom: 2.8px !important;
+  .v-btn__content {
+    display: flex;
+    align-items: center;
+
+    i {
+      // border: solid 1px blue;
+      margin-right: 4px; /* Ajusta el margen según sea necesario */
+    }
+
+    span {
+      align-self: center;
+      display: inline-block;
+      vertical-align: middle;
+      top: -1px;
+      position: relative;
+      // border: solid 1px green;
+    }
+  }
 }
 
 .v-btn {
-  // @include text-flat;
   &.bg-gold {
     border: solid 1px #fff;
-    // text-shadow: 1px 1px 1px #000;
   }
   &--disabled {
     color: #fff !important;

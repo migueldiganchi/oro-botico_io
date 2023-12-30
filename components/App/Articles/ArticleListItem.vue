@@ -15,14 +15,14 @@
     </v-card-title>
 
     <v-card-actions>
-      <v-btn color="indigo darken-4" rounded text large>
+      <v-btn color="indigo darken-4" rounded text>
         <v-icon class="mr-2">mdi-plus</v-icon>
         <span>Ver más</span>
       </v-btn>
 
       <v-spacer />
 
-      <v-btn color="indigo darken-4" rounded text large>
+      <v-btn color="indigo darken-4" rounded text>
         <span>Compartir</span>
         <v-icon class="ml-2">mdi-share-variant</v-icon>
       </v-btn>

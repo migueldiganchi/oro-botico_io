@@ -16,7 +16,6 @@
     <div class="mb-9">
       <v-btn
         to="/auth/new"
-        large
         rounded
         outlined
         elevation="3"

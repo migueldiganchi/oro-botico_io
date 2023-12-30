@@ -24,7 +24,6 @@
         <v-btn
           :disabled="isWaiting"
           type="submit"
-          large
           rounded
           class="bg-golden pl-2"
           outlined

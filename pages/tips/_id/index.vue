@@ -22,7 +22,7 @@
 
       <div class="text-lg-h6 text-md-h7 my-12">
         <div class="mb-6 text-center">
-          <v-btn to="/tips?random=1" rounded large class="bg-gold white--text">
+          <v-btn to="/tips?random=1" rounded class="bg-gold white--text">
             <v-icon class="mr-2 mt-2">mdi-comment-arrow-right</v-icon>
             <span>Consejo al azar</span>
           </v-btn>
@@ -52,7 +52,6 @@
           <v-btn
             @click="toggleSharing()"
             rounded
-            large
             outlined
             class="text-dark"
           >
@@ -66,7 +65,6 @@
             @click="donate()"
             rounded
             class="bg-dark-gradient"
-            large
           >
             <v-icon class="mr-2">mdi-heart</v-icon>
             <span>Donar</span>
@@ -79,7 +77,6 @@
             @click="toggleSharing()"
             rounded
             class="pl-3 text-dark"
-            large
             outlined
           >
             <v-icon class="mr-2">mdi-share-variant</v-icon>
@@ -91,7 +88,6 @@
             @click="donate()"
             rounded
             class="bg-dark-gradient mr-2 pl-3"
-            large
           >
             <v-icon class="mr-2 mt-2">mdi-heart</v-icon>
             <span>Donar</span>

@@ -41,11 +41,9 @@
         />
 
         <!-- Success Message -->
-        <p
-          v-else-if="successMessage"
-          v-html="successMessage"
-          class="text-light text-center"
-        />
+        <p v-else-if="successMessage" class="text-light text-center">
+          <b v-html="successMessage" />
+        </p>
 
         <!-- Result Actions -->
         <div class="text-center mt-9">
@@ -53,8 +51,8 @@
             <v-btn
               rounded
               outlined
-              class="pr-4 pl-3 bg-gradient text-dark"
-              large
+              class="pr-4 pl-3 bg-gold"
+              dark
               elevation="3"
               to="/"
             >
@@ -66,8 +64,8 @@
               v-if="errorMessage"
               rounded
               outlined
-              class="pr-4 pl-3 bg-gradient text-dark mx-2 my-4"
-              large
+              class="pr-4 pl-3 bg-gradient mx-2 my-4"
+              dark
               elevation="3"
               @click="clearResults"
             >

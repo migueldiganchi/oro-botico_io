@@ -36,7 +36,6 @@
             <v-btn
               icon
               fab
-              x-large
               elevation="3"
               style="background-color: #25d366"
               href="https://api.whatsapp.com"
@@ -53,7 +52,6 @@
             <v-btn
               icon
               fab
-              x-large
               elevation="3"
               style="background-color: #c13584"
               href="https://instagram.com"
@@ -70,7 +68,6 @@
             <v-btn
               icon
               fab
-              x-large
               elevation="3"
               style="background-color: #1877f2"
               href="https://facebook.com/oro.botico"
@@ -88,7 +85,6 @@
       <v-btn
         :href="'/m/' + member.nickname"
         target="_blank"
-        large
         class="bg-gold ma-1 pl-3"
         rounded
       >

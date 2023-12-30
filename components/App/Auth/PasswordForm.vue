@@ -2,7 +2,7 @@
   <v-form @submit.prevent="send" class="reset-password-form">
     <v-card color="white" :disabled="isWaiting" class="pa-9">
       <!-- Password input -->
-      <h4 class="mx-auto text-center text-dark mb-9 App-xs-box">
+      <h4 class="mx-auto text-center text-white mb-9 App-xs-box">
         Ingresa las nuevas credenciales de tu cuenta
       </h4>
 
@@ -15,7 +15,7 @@
           :append-icon="isPasswordVisible ? 'mdi-eye-off' : 'mdi-eye'"
           rounded
           outlined
-          color="light-green"
+          color="amber"
           label="Nueva Contraseña"
           @click:append="togglePassword()"
         />
@@ -35,7 +35,7 @@
           :type="!isPasswordConfirmationVisible ? 'password' : 'text'"
           rounded
           outlined
-          color="light-green"
+          color="amber"
           placeholder="Confirma la nueva contraseña"
           @click:append="togglePasswordConfirmation()"
         />
@@ -50,7 +50,6 @@
           :disabled="isWaiting"
           outlined
           type="submit"
-          large
           rounded
           class="bg-golden pl-2"
           elevation="3"
@@ -134,7 +133,7 @@ export default {
         if (!this.$v.form.password.required) {
           this.passwordErrors.push({
             key: "required",
-            text: "El título es necesario",
+            text: "La contraseña es necesaria",
           });
         }
         if (!this.$v.form.password.minLength) {
@@ -156,10 +155,11 @@ export default {
         if (!this.$v.form.passwordConfirmation.required) {
           this.passwordConfirmationErrors.push({
             key: "required",
-            text: "Debe confirmar la contraseña",
+            text: "Por favor confirma la contraseña",
           });
         }
-        if (!this.form.password != this.form.passwordConfirmation) {
+
+        if (this.form.passwordConfirmation != this.form.password) {
           this.passwordErrors.push({
             key: "equals",
             text: `Las contraseñas deben coincidir`,
@@ -167,7 +167,9 @@ export default {
         }
       }
 
-      return !this.emailErrors.length && !this.passwordErrors.length;
+      return (
+        !this.passwordErrors.length && !this.passwordConfirmationErrors.length
+      );
     },
 
     close() {

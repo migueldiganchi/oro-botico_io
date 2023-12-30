@@ -122,7 +122,6 @@
           :text="isWaiting"
           :elevation="!isWaiting ? '3' : '1'"
           fixed
-          large
           right
           bottom
           class="orange white--text pl-3 pr-4"

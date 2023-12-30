@@ -4,7 +4,6 @@
     <v-btn
       @click="startInstagram()"
       fixed
-      large
       dark
       left
       bottom
@@ -21,7 +20,6 @@
       @click="startWhatsapp()"
       color="green"
       fixed
-      large
       dark
       right
       bottom

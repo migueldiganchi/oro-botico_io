@@ -107,21 +107,18 @@
             'pl-2': isAccepted && !isWaiting,
           }"
           type="submit"
-          large
           outlined
           class="bg-gold text-light"
           elevation="3"
         >
-          <span>
-            <v-icon
-              class="google-icon text-light"
-              :class="{
-                'mr-2': isAccepted && !isWaiting,
-              }"
-              >mdi-check</v-icon
-            >
-            <span v-if="isAccepted && !isWaiting">Crear Cuenta</span>
-          </span>
+          <v-icon
+            class="google-icon text-light"
+            :class="{
+              'mr-2': isAccepted && !isWaiting,
+            }"
+            >mdi-check</v-icon
+          >
+          <span v-if="isAccepted && !isWaiting">Crear Cuenta</span>
         </v-btn>
       </div>
     </v-card>

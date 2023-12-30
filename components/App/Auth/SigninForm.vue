@@ -62,15 +62,12 @@
             'pl-2': !isWaiting,
           }"
           type="submit"
-          large
           class="bg-gold text-light"
           outlined
           elevation="3"
         >
-          <span>
-            <v-icon class="mr-2 google-icon">mdi-arrow-right</v-icon>
-            <span style="position: relative; top: 3px">Ingresar</span>
-          </span>
+          <v-icon class="mr-2 google-icon">mdi-check</v-icon>
+          <span>Ingresar</span>
         </v-btn>
       </div>
     </v-card>

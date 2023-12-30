@@ -22,11 +22,12 @@
         <div v-if="!isWaiting && !isTokenValid" class="mt-6 text-center">
           <v-btn
             rounded
-            class="ml-3 pl-2 bg-gradient text-dark"
+            class="ml-3 pl-2 bg-gold"
+            dark
             elevation="3"
             to="/auth/reset"
           >
-            <v-icon>mdi-restart</v-icon>
+            <v-icon class="mt-1">mdi-restart</v-icon>
             <span class="ml-2">Reintentar</span>
           </v-btn>
         </div>
@@ -34,7 +35,7 @@
 
       <!-- Password Form -->
       <password-form
-        v-else-if="isTokenValid"
+        v-else-if="isTokenValid && !isSuccessfullChanged"
         :is-waiting="isWaiting"
         @onSave="saveNewPassword"
       />
@@ -46,12 +47,24 @@
           v-if="isSuccessfullChanged"
           class="auth-page-box bg-double-color pa-4 radius-3 text-center"
         >
-          <div class="pa-6">La contraseña se ha guardado exitosamente</div>
-          <div class="mt-6">
-            <v-btn rounded class="pl-2 bg-gradient text-dark" elevation="3">
-              <v-icon>mdi-home</v-icon>
-              <span class="ml-2">Ir al Inicio</span>
+          <!-- Check Icon -->
+          <v-icon class="amber--text" size="90px">mdi-check</v-icon>
+
+          <!-- Success Message -->
+          <div class="pa-6">
+            <b>La contraseña se ha guardado exitosamente</b>
+          </div>
+
+          <!-- Actions -->
+          <div class="my-6">
+            <v-btn rounded class="pl-3 bg-gold" dark elevation="3" to="auth">
+              <v-icon class="mr-2">mdi-key</v-icon>
+              <span>Entrar</span>
             </v-btn>
+          </div>
+
+          <div class="pa-3">
+            <nuxt-link to="/">Ir al Inicio</nuxt-link>
           </div>
         </v-card>
 
@@ -70,14 +83,8 @@
               <span class="ml-2">Ir al Inicio</span>
             </v-btn>
 
-            <v-btn
-              rounded
-              class="ml-3 pl-2 bg-gradient text-dark"
-              elevation="3"
-              to="/auth/reset"
-            >
+            <v-btn icon elevation="3" to="/auth/reset">
               <v-icon>mdi-restart</v-icon>
-              <span class="ml-2">Reintentar</span>
             </v-btn>
           </div>
         </v-card>

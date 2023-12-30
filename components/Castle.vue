@@ -42,7 +42,7 @@
 
     <div class="App-xxs-box pt-12 mt-15 mx-auto text-dark">
       <h3 class="mb-15">
-        ¡Comparte la riqueza de conocimientos de Oro Bótico y únete a nuestra
+        ¡Comparte la riqueza de conocimientos de DirectOro y únete a nuestra
         comunidad de éxito! 💡💪✨
       </h3>
 
@@ -221,7 +221,7 @@
             class="text-dark d-inline-block text-thin"
             style="max-width: 540px !important"
           >
-            ¡<b>Amplifica tus ganancias</b> con <b>Oro Bótico</b>! Deja que tu
+            ¡<b>Amplifica tus ganancias</b> con <b>DirectOro</b>! Deja que tu
             asistente virtual promocione tus <b>cursos</b>, <b>productos</b> y
             <b>servicios</b> en línea con un megáfono digital 📣💰
           </h1>

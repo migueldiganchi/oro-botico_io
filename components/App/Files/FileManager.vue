@@ -16,7 +16,7 @@
               class="top-radius_27"
               border="solid 1px blue"
               :alt="
-                file.title || 'Oro Bótico - Trading inteligente e intuitivo'
+                file.title || 'DirectOro - Trading inteligente e intuitivo'
               "
             />
           </div>

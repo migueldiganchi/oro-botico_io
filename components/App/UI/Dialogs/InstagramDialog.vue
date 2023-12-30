@@ -12,7 +12,7 @@
       >
         <img
           :src="botPictureUrl"
-          alt="Oro Bótico Bot"
+          alt="DirectOro Bot"
           style="max-width: 120px"
           class="d-inline-block"
         />

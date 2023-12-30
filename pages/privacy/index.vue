@@ -11,12 +11,12 @@
           <b>1. Información que Recopilamos: </b>Recopilamos información que nos
           proporcionas al registrarte, como tu nombre y dirección de correo
           electrónico. También podemos recopilar información sobre cómo utilizas
-          Oro Bótico y la información generada por tus asistentes virtuales.
+          DirectOro y la información generada por tus asistentes virtuales.
         </li>
 
         <li>
           <b>2. Uso de la Información: </b>Utilizamos tus datos para
-          proporcionar y mejorar Oro Bótico, así como para comunicarnos contigo.
+          proporcionar y mejorar DirectOro, así como para comunicarnos contigo.
           No compartimos tu información personal con terceros, excepto cuando
           sea necesario para operar nuestros servicios.
         </li>
@@ -39,7 +39,7 @@
           <br>
           Estas políticas y términos proporcionan una
           visión más completa de cómo se manejan los datos y cómo se utilizan
-          los servicios de Oro Bótico. Ten en cuenta que estos son solo ejemplos
+          los servicios de DirectOro. Ten en cuenta que estos son solo ejemplos
           y puedes personalizarlos según las necesidades específicas de tu
           plataforma.
         </li>

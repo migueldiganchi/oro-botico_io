@@ -62,7 +62,7 @@ export default {
         {
           key: 3,
           title: "¿Tengo posibilidad de crecimiento?",
-          content: `Definitivamente. En <b>Oro Bótico</b> nos centramos no solo en mejorar tu economía, 
+          content: `Definitivamente. En <b>DirectOro</b> nos centramos no solo en mejorar tu economía, 
             sino que también necestiamos que mejores tu vida en general. Tenemos sesiones de Mindset, consejos y 
             administración de emociones`,
         },

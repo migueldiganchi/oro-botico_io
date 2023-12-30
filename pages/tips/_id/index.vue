@@ -30,7 +30,7 @@
 
         <div class="mt-9 mb-6">
           <p class="mb-3 text-h5">
-            En <b>Oro Bótico</b> los consejos son <b>al azar</b>
+            En <b>DirectOro</b> los consejos son <b>al azar</b>
           </p>
           <p class="mb-6">
             <!-- Mobile -->
@@ -129,7 +129,7 @@ export default {
 
     return {
       title:
-        "Consejo de Trading en Oro Bótico: " + tipTitle + ". " + tipDescription,
+        "Consejo de Trading en DirectOro: " + tipTitle + ". " + tipDescription,
       meta: [
         {
           hid: "og:url",

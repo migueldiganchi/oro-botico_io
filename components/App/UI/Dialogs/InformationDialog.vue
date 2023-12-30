@@ -78,18 +78,14 @@
           <v-btn
             v-if="to"
             :to="to"
-            class="d-inline-block bg-gold ml-2 pl-3 float-right"
+            class="bg-gold ml-2 pl-3"
             outlined
             rounded
             elevation="3"
             @click.stop="dialog = false"
           >
-            <div class="d-inline-block mt-2">
-              <v-icon>{{ hrefIcon || toIcon || "mdi-arrow-right" }}</v-icon>
-              <span class="ml-2" style="position: relative; top: 3px">{{
-                toCaption
-              }}</span>
-            </div>
+            <v-icon>{{ hrefIcon || toIcon || "mdi-arrow-right" }}</v-icon>
+            <span class="ml-2">{{ toCaption }}</span>
           </v-btn>
         </div>
       </v-card-actions>

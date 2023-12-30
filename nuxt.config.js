@@ -24,18 +24,18 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    titleTemplate: "%s - " + "Universidad Virtual de Trading",
-    title: "Oro",
+    titleTemplate: "%s - " + "Directorio Virtual de Traders",
+    title: "DirectOro",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         hid: "og:title",
         property: "og:title",
-        name: "Oro Bótico",
+        name: "DirectOro",
         content:
           process.env.npm_package_description ||
-          "Universidad Virtual de Trading Dirigida con Inteligencia Artificial",
+          "Directorio Virtual de Traders",
       },
     ],
     link: [

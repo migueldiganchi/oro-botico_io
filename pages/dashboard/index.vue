@@ -53,9 +53,9 @@ export default {
       return this.isWaiting
         ? this.waitingMessage
         : this.isSuperAuthenticated // SUPER USER
-        ? "Socio de Oro Bótico"
+        ? "Socio de DirectOro"
         : this.isAuthenticated // SIMPLE USER
-        ? "Administra tu Mi Panel en Oro Bótico"
+        ? "Administra tu Mi Panel en DirectOro"
         : "[]";
     },
 

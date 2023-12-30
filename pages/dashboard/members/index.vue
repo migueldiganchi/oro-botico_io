@@ -89,7 +89,7 @@ export default {
     pageDescription() {
       return this.isWaiting
         ? this.waitingMessage
-        : "Administra a los miembros de Oro Bótico";
+        : "Administra a los miembros de DirectOro";
     },
 
     isAuthenticated() {

@@ -6,7 +6,7 @@
 
     <p class="text-dark mt-6 mb-12 pa-0 text-h6 text-thin">
       <span>
-        Me interesa unirme a <b>Oro Bótico</b> para <b>aprender trading</b> de
+        Me interesa unirme a <b>DirectOro</b> para <b>aprender trading</b> de
         manera personalizada con la ayuda de <b>asistentes virtuales</b>. ¡Estoy
         emocionado por comenzar este <b>viaje hacia el éxito financiero</b>!
         Regístrame ahora y comencemos <b>juntos</b>.

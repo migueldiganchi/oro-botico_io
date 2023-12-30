@@ -35,7 +35,7 @@
         <p v-if="!isRandoming && !isRandom" class="mb-9 white--text xs-box">
           ¡<b class="text-gold">ATENCIÓN</b>! Dale click al botón y se cargará
           una página con uno de los consejos al azar que te regala
-          <b class="text-gold">Oro Bótico</b>
+          <b class="text-gold">DirectOro</b>
         </p>
 
         <v-btn

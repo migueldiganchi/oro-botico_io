@@ -12,7 +12,7 @@
           <v-img
             :src="logoUrl"
             :lazy-src="logoUrl"
-            alt="Oro Bótico"
+            alt="DirectOro"
             referrerpolicy="no-referrer"
             contain
             aspect-ratio="1"

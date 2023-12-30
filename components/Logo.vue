@@ -5,7 +5,7 @@
         :src="url"
         :lazy-src="url"
         :height="size === 'xs' ? 'auto' : '180px'"
-        alt="Oro Bótico"
+        alt="DirectOro"
         referrerpolicy="no-referrer"
         contain
         aspect-ratio="1"
@@ -16,7 +16,7 @@
       <v-img
         :src="url"
         :height="size === 'xs' ? 'auto' : '180px'"
-        alt="Oro Bótico"
+        alt="DirectOro"
         referrerpolicy="no-referrer"
         contain
         aspect-ratio="1"

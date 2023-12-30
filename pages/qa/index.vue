@@ -16,65 +16,67 @@ export default {
       questions: [
         {
           key: 1,
-          question: "¿Qué es Oro Bótico?",
+          question: "¿Qué servicios ofrece DirectOro?",
           answer:
-            "Oro Bótico es una plataforma en línea que te permite crear asistentes virtuales personalizados para la enseñanza de trading de forma sencilla y efectiva.",
+            "DirectOro es un directorio virtual que presenta perfiles detallados de Traders Profesionales. Ofrece información sobre su experiencia, estrategias y logros en los mercados financieros.",
         },
         {
           key: 2,
-          question: "¿Cómo funciona Oro Bótico?",
+          question: "¿Cómo funciona DirectOro?",
           answer:
-            "Oro Bótico te brinda herramientas para diseñar, entrenar y desplegar asistentes virtuales que pueden responder preguntas frecuentes de tus alumnos sobre trading.",
+            "DirectOro funciona como un espacio en línea donde puedes explorar perfiles de Traders Profesionales. Proporciona herramientas para encontrar el trader que se adapte a tus necesidades y aprender de sus estrategias.",
         },
         {
           key: 3,
-          question: "¿Qué puedo lograr con Oro Bótico?",
+          question: "¿Es necesario registrarse para utilizar DirectOro?",
           answer:
-            "Con Oro Bótico, puedes mejorar la experiencia de aprendizaje de tus estudiantes en trading al proporcionar respuestas rápidas y precisas a sus preguntas.",
+            "Sí, se requiere un registro para acceder a todas las funciones de DirectOro. El registro es gratuito y te permite explorar perfiles completos de Traders Profesionales.",
         },
         {
           key: 4,
           question:
-            "¿Necesito experiencia en programación para usar Oro Bótico?",
+            "¿Puedo contactar directamente a los Traders en DirectOro?",
           answer:
-            "No, Oro Bótico está diseñado para ser utilizado por personas sin experiencia en programación. Nuestra plataforma es fácil de usar y no requiere conocimientos técnicos.",
+            "Sí, DirectOro facilita el contacto directo entre usuarios y Traders Profesionales. Puedes enviar mensajes, hacer preguntas y obtener asesoramiento personalizado.",
         },
         {
           key: 5,
-          question: "¿Es seguro usar Oro Bótico?",
+          question:
+            "¿Qué información incluye el perfil de un Trader en DirectOro?",
           answer:
-            "Sí, nos tomamos muy en serio la seguridad de tus datos. Utilizamos medidas de seguridad avanzadas para proteger la información de nuestros usuarios.",
+            "Los perfiles de Traders en DirectOro incluyen detalles sobre su experiencia, estrategias de trading, historial de éxitos y una biografía personal. Además, se destacan las especialidades y habilidades únicas que ofrecen.",
         },
         {
           key: 6,
-          question:
-            "¿Puedo personalizar la apariencia de mi asistente virtual?",
+          question: "¿DirectOro garantiza el éxito en el trading?",
           answer:
-            "Sí, puedes personalizar la apariencia y el comportamiento de tu asistente virtual para que se adapte a tu marca y estilo.",
+            "DirectOro proporciona información valiosa, pero no garantiza el éxito en el trading. Los resultados pueden variar según las estrategias implementadas y las condiciones del mercado.",
         },
         {
           key: 7,
-          question: "¿Cuáles son los costos asociados con Oro Bótico?",
+          question: "¿Cómo evalúo la calidad de un Trader en DirectOro?",
           answer:
-            "Ofrecemos planes de precios flexibles para adaptarnos a tus necesidades. Puedes consultar nuestros precios en nuestro sitio web.",
+            "Puedes evaluar la calidad de un Trader revisando su historial de éxitos, las opiniones de otros usuarios y su nivel de experiencia. La plataforma proporciona herramientas para tomar decisiones informadas.",
         },
         {
           key: 8,
-          question: "¿Ofrecen soporte técnico?",
+          question:
+            "¿Cuáles son las tarifas asociadas con el uso de DirectOro?",
           answer:
-            "Sí, tenemos un equipo de soporte técnico disponible para ayudarte en caso de problemas o preguntas. Puedes comunicarte con nosotros a través de correo electrónico o chat en vivo.",
+            "Ofrecemos un plan gratuito llamado 'Perfil Básico' que permite crear y gestionar tu perfil de Trader Profesional sin costo. También ofrecemos un plan premium llamado 'Perfil Premium + Asistente Virtual' por $15 al mes, que incluye un Asistente Virtual personalizado entrenado e integrado con chat GPT.",
         },
         {
           key: 9,
-          question: "¿Puedo probar Oro Bótico antes de comprometerme?",
+          question: "¿Ofrecen soporte técnico en DirectOro?",
           answer:
-            "Sí, ofrecemos una versión de prueba gratuita para que puedas explorar nuestras funciones antes de tomar una decisión.",
+            "Sí, contamos con un equipo de soporte técnico disponible para ayudarte con cualquier pregunta o problema que puedas tener al utilizar DirectOro. Puedes comunicarte con nosotros a través de correo electrónico o chat en vivo.",
         },
         {
           key: 10,
-          question: "¿Cómo puedo comenzar a usar Oro Bótico?",
+          question:
+            "¿Puedo probar las funciones premium de DirectOro antes de suscribirme?",
           answer:
-            "Es fácil comenzar con Oro Bótico. Solo regístrate en nuestra plataforma, crea tu asistente virtual y comienza a mejorar la experiencia de aprendizaje de tus estudiantes en trading.",
+            "Sí, ofrecemos una prueba gratuita del plan 'Perfil Premium + Asistente Virtual' para que puedas explorar todas las características antes de tomar una decisión de suscripción.",
         },
       ],
       breadcrumbItems: [

@@ -44,7 +44,7 @@
         </div>
 
         <small
-          >Visita ahora la <b>Universidad Digital de Trading</b> en donde se
+          >Visita ahora nuestro <b>Directorio Digital de Traders</b> en donde se
           está preparando <b>{{ member.name }}</b></small
         >
 
@@ -85,7 +85,7 @@ export default {
   computed: {
     oroData() {
       return {
-        name: "Oro Bótico",
+        name: "DirectOro",
         as: "Digitalización y Automatización para Líderes de Trading",
         pictureUrl: require("~/assets/media/trading.png") + "?" + Date.now(),
       };

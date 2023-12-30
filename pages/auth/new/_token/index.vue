@@ -104,7 +104,7 @@ export default {
             this.statusAccountIsActive = isActive;
             this.statusMessageType = isActive ? "success" : "danger";
             this.statusMessage =
-              "¡<b>Felicitaciones</b>! Puedes acceder a todas las funcionalidades de <b>Oro Bótico</b>";
+              "¡<b>Felicitaciones</b>! Puedes acceder a todas las funcionalidades de <b>DirectOro</b>";
           })
           .catch((error) => {
             this.statusMessageType = "danger";

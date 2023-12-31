@@ -7,7 +7,7 @@
       >
         <div class="text-center" style="text-align: center !important">
           <v-icon class="mr-2 ml-0">mdi-whatsapp</v-icon>
-          Whatsapp DirectOro
+          Whatsapp Oro Bótico
         </div>
       </v-card-title>
 

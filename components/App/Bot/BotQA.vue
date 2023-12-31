@@ -47,7 +47,7 @@
 
           <div
             v-if="question.references"
-            class="qa-list-item-references mb-4 text-center text-dark"
+            class="qa-list-item-references mb-4 text-dark"
           >
             <div
               v-for="(reference, referenceIndex) in question.references"

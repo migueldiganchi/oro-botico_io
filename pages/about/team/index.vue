@@ -2,7 +2,7 @@
   <page
     name="team"
     title="Historias Reales"
-    description="Conoce las historias de los fundadores y los partners de DirectOro"
+    description="Conoce las historias de los fundadores y los partners de Oro Bótico"
     :breadcrumbs="breadcrumbItems"
   >
     <div class="my-9">

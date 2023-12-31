@@ -47,15 +47,15 @@
           @click="isDrawerLeftOpen = !isDrawerLeftOpen"
         >
           <b
-            >DIRECT<span class="text-gold d-none d-sm-inline-block"
-              >ORO</span
+            >ORO <span class="text-gold d-none d-sm-inline-block"
+              >BÓTICO</span
             ></b
           >
         </span>
         <nuxt-link v-else to="/" class="black--text">
           <b
-            >DIRECT<span class="text-gold d-none d-sm-inline-block"
-              >ORO</span
+            >ORO <span class="text-gold d-none d-sm-inline-block"
+              >BÓTICO</span
             ></b
           >
         </nuxt-link>
@@ -86,7 +86,7 @@
       <v-btn
         v-if="isAuthenticated"
         :disabled="isWaiting"
-        :title="authenticatedUser?.name || 'DirectOro'"
+        :title="authenticatedUser?.name || 'Oro Bótico'"
         icon
         light
         fab
@@ -203,12 +203,12 @@
           <v-img
             aspect-ratio="1"
             :src="require('~/assets/media/trading.png')"
-            alt="DirectOro"
+            alt="Oro Bótico"
             class="d-inline-block mr-3"
             height="24.3px"
             width="24.3px"
           />
-          <b>DIRECT</b><b class="ml-1 text-gold">ORO</b>
+          <b>ORO</b> <b class="ml-1 text-gold">BÓTICO</b>
         </span>
       </div>
 
@@ -309,7 +309,7 @@
         <div v-else class="text-center text-gold pt-3">
           <v-icon size="72px" class="text-gold mb-6">mdi-bell</v-icon>
           <p>
-            Necesitas estar registrado para acceder a las novedades de DirectOro
+            Necesitas estar registrado para acceder a las novedades de Oro Bótico
           </p>
           <!-- <div class="mt-9">
             <v-btn
@@ -354,7 +354,7 @@
             <div
               class="presentation-text mt-3 text-light animate__animated animate__fadeIn"
             >
-              <h1 CLASS="mb-3">DIRECT<span class="text-gold">ORO</span></h1>
+              <h1 CLASS="mb-3">ORO <span class="text-gold">BÓTICO</span></h1>
               <h3 class="mx-auto d-inline-block" style="max-width: 360px">
                 <span>TRADING</span>
                 <b class="text-gold">SIMPLE</b>,
@@ -377,7 +377,7 @@
                 style="max-width: 360px"
               >
                 <b class="text-gold">{{ hostMember.name }}</b
-                >, REPRESENTANTE OFICIAL DE <b class="text-gold">DIRECT</b>ORO
+                >, REPRESENTANTE OFICIAL DE <b class="text-gold">ORO </b>BÓTICO
               </h2>
             </div>
           </div>
@@ -778,7 +778,7 @@
       <AssistantDialog
         :model="isSharing"
         :persistent="false"
-        text="¡Comparte DirectOro!"
+        text="¡Comparte Oro Bótico!"
         details="Es un servicio que merece la pena ser compartido!"
         @on-assistant-close="toggleSharing"
       >
@@ -801,7 +801,7 @@
       class="App-footer elevation-6 white--text text-center d-block pa-15 bg-tr-white"
     >
       <div class="d-inline-block">
-        <span class="text-dark"><b>DIRECT</b><b class="text-gold">ORO</b></span>
+        <span class="text-dark"><b>ORO</b><b class="text-gold">BÓTICO</b> </span>
       </div>
       <span class="text-dark">&copy; {{ new Date().getFullYear() }}</span
       ><span class="text-dark">
@@ -1225,9 +1225,9 @@ export default {
   methods: {
     betaCommunication() {
       const betaInfo = {
-        title: "¡Descubre la Beta de DirectOro!",
+        title: "¡Descubre la Beta de Oro Bótico!",
         description:
-          "Estamos emocionados de presentar la fase beta de DirectOro, la plataforma pionera que lleva la educación y el entrenamiento en trading a nuevas alturas mediante el poder de la inteligencia artificial avanzada.",
+          "Estamos emocionados de presentar la fase beta de Oro Bótico, la plataforma pionera que lleva la educación y el entrenamiento en trading a nuevas alturas mediante el poder de la inteligencia artificial avanzada.",
         mediaUrl: require("~/assets/media/trading.png"),
       };
 
@@ -1248,14 +1248,14 @@ export default {
       if (displayerElement) {
         const phrases = [
           "Trading con confianza, liderando el camino hacia el éxito.",
-          "Uniéndonos en el trading, construyendo juntos un futuro sólido en DirectOro.",
-          "Vive el trading, únete a la comunidad de DirectOro.",
-          "Haz crecer tu futuro con DirectOro Trading.",
-          "Innovación en trading, unidos en DirectOro.",
-          "Avanza en el mercado con la comunidad de trading de DirectOro",
-          "Confianza y éxito en trading, solo en DirectOro.",
-          "Transforma tu futuro financiero con DirectOro Trading.",
-          "Juntos logramos más en DirectOro Trading.",
+          "Uniéndonos en el trading, construyendo juntos un futuro sólido en Oro Bótico.",
+          "Vive el trading, únete a la comunidad de Oro Bótico.",
+          "Haz crecer tu futuro con Oro Bótico Trading.",
+          "Innovación en trading, unidos en Oro Bótico.",
+          "Avanza en el mercado con la comunidad de trading de Oro Bótico",
+          "Confianza y éxito en trading, solo en Oro Bótico.",
+          "Transforma tu futuro financiero con Oro Bótico Trading.",
+          "Juntos logramos más en Oro Bótico Trading.",
           "VIVE EL TRADING, construye tu libertad",
           "¡Esta es tu oportunidad para cambiarlo todo!",
         ];

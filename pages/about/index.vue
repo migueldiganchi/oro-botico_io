@@ -14,7 +14,7 @@
             </h1>
 
             <p class="mb-9">
-              <b>DirectOro</b> nace con la necesidad de
+              <b>Oro Bótico</b> nace con la necesidad de
               <b>agilizar la inducción al negocio del Trading</b> y se enfoca en
               quienes estén interesados en convertirse rápidamente en dueños de
               <b>su propio negocio de Trading</b>.
@@ -63,7 +63,7 @@ export default {
           to: "/",
         },
         {
-          text: "¿Qué es DirectOro?",
+          text: "¿Qué es Oro Bótico?",
           disabled: true,
           icon: "mdi-account-multiple-outline",
           to: "/about",
@@ -74,7 +74,7 @@ export default {
 
   computed: {
     pageTitle() {
-      return "¿Qué es DirectOro?";
+      return "¿Qué es Oro Bótico?";
     },
 
     pageDescription() {

@@ -66,7 +66,7 @@ export default {
     pageDescription() {
       return (
         this.waitingMessage ||
-        "Por favor ingresa tus credenciales de acceso y sigue disfrutando de DirectOro"
+        "Por favor ingresa tus credenciales de acceso y sigue disfrutando de Oro Bótico"
       );
     },
     isAuthenticated() {
@@ -85,7 +85,7 @@ export default {
 
           // Welcome user!
           this.$notify({
-            message: `¡Bienvenid@ a DirectOro ${name}!`,
+            message: `¡Bienvenid@ a Oro Bótico ${name}!`,
             color: "green",
             timeout: 4500,
           });

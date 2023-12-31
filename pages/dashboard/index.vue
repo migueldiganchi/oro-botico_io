@@ -53,9 +53,9 @@ export default {
       return this.isWaiting
         ? this.waitingMessage
         : this.isSuperAuthenticated // SUPER USER
-        ? "Socio de DirectOro"
+        ? "Socio de Oro Bótico"
         : this.isAuthenticated // SIMPLE USER
-        ? "Administra tu Mi Panel en DirectOro"
+        ? "Administra tu Mi Panel en Oro Bótico"
         : "[]";
     },
 
@@ -107,12 +107,12 @@ export default {
               icon: "mdi-bell",
               to: "/dashboard/notifications",
             },
-            {
-              key: "3",
-              title: "Asistentes",
-              icon: "mdi-robot",
-              to: "/dashboard/assistants",
-            },
+            // {
+            //   key: "3",
+            //   title: "Asistentes",
+            //   icon: "mdi-robot",
+            //   to: "/dashboard/assistants",
+            // },
             {
               key: "1",
               title: "Mi Cuenta",

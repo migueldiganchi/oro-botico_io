@@ -185,7 +185,7 @@
               <b>correo electrónico</b> con el que registraste la cuenta, por
               favor escríbenos a
               <a
-                href="mailto:hello@ciudadbotica.com?subject=Quiero ser parte de DirectOro&body=Me interesa registrarme en el Club de Enseñanza Gratuita de Trading"
+                href="mailto:hello@ciudadbotica.com?subject=Quiero ser parte de Oro Bótico&body=Me interesa registrarme en el Club de Enseñanza Gratuita de Trading"
                 style="text-decoration: none"
                 ><b class="text-gold">hello@ciudadbotica.com</b></a
               ></small
@@ -204,10 +204,8 @@
           class="pl-2 bg-gold"
           elevation="3"
         >
-          <span>
-            <v-icon class="mr-2 google-icon">mdi-check</v-icon>
-            <span class="">Guardar</span>
-          </span>
+          <v-icon class="mr-2 google-icon">mdi-check</v-icon>
+          <span class="">Guardar</span>
         </v-btn>
       </div>
     </v-form>

@@ -1,7 +1,7 @@
 <template>
   <v-card light class="notification-card">
     <v-card-title
-      class="pl-4 text-left text-dark"
+      class="px-4 text-left text-dark grey lighten-4"
       :class="{ 'mb-2': isDescriptionVisible }"
     >
       <small style="font-size: 15px; line-height: 19px">{{
@@ -9,7 +9,10 @@
       }}</small>
     </v-card-title>
 
-    <v-card-subtitle class="pb-6 ml-0 pl-4 ma-0 text-left">
+    <v-card-subtitle
+      v-if="notification.readAt"
+      class="pa-6 ml-0 ma-0 text-left"
+    >
       {{ notification.message }}
     </v-card-subtitle>
 

@@ -37,7 +37,7 @@
               <v-list-item-title
                 >Nano Bot
                 <small style="font-size: 10px"
-                  >from <b>DirectOro</b></small
+                  >from <b>Oro Bótico</b></small
                 ></v-list-item-title
               >
               <v-list-item-subtitle
@@ -151,7 +151,7 @@ export default {
           to: "/",
         },
         {
-          text: "¿Qué es DirectOro?",
+          text: "¿Qué es Oro Bótico?",
           disabled: true,
           icon: "mdi-robot",
           to: "/bot",
@@ -175,7 +175,7 @@ export default {
       return "Diccio-Bot";
     },
     pageDescription() {
-      return "¡Hola! Mi nombre es <b>Nano Bot</b>, soy el asistente virtual de <b>DirectOro</b>, y estoy aquí para ayudarte en lo que pueda con tu <b>Trading</b>";
+      return "¡Hola! Mi nombre es <b>Nano Bot</b>, soy el asistente virtual de <b>Oro Bótico</b>, y estoy aquí para ayudarte en lo que pueda con tu <b>Trading</b>";
     },
   },
   methods: {

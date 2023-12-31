@@ -2,7 +2,7 @@
   <page
     name="member"
     :title="member.name"
-    description="Bio of the member for describe his/her profession profile"
+    :description="member.description"
     :breadcrumbs="breadcrumbItems"
     :mediaUrl="pictureUrl"
   >

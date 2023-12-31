@@ -85,7 +85,7 @@ export default {
   computed: {
     oroData() {
       return {
-        name: "DirectOro",
+        name: "Oro Bótico",
         as: "Digitalización y Automatización para Líderes de Trading",
         pictureUrl: require("~/assets/media/trading.png") + "?" + Date.now(),
       };

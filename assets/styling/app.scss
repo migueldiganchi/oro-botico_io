@@ -892,7 +892,6 @@ header.v-app-bar {
 
 .bot-qa .qa-list .qa-list-item .qa-list-item-question {
   padding: 15.3px;
-  position: relative;
 
   &_actions {
     @include border-radius(33px);
@@ -920,8 +919,6 @@ header.v-app-bar {
 }
 
 .bot-qa .qa-list .qa-list-item.active .qa-list-item-question {
-  // background-color: #673ab7 !important;
-  // @include bg-gold;
   @include bg-dark-gradient;
   color: #fff !important;
   text-shadow: none !important;

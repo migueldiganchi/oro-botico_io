@@ -29,55 +29,44 @@
 
       <!-- @TODO: COUNTRY CITY INFORMATION -->
 
-      <v-row class="mt-15">
+      <!-- Social Actions -->
+      <div class="mt-15">
         <!-- WHATSAPP INFORMATION -->
-        <v-col cols="4">
-          <div class="mb-6">
-            <v-btn
-              icon
-              fab
-              elevation="3"
-              style="background-color: #25d366"
-              href="https://api.whatsapp.com"
-              target="_blank"
-            >
-              <v-icon>mdi-whatsapp</v-icon>
-            </v-btn>
-          </div>
-        </v-col>
+        <v-btn
+          icon
+          fab
+          elevation="3"
+          style="background-color: #25d366"
+          href="https://api.whatsapp.com"
+          target="_blank"
+        >
+          <v-icon>mdi-whatsapp</v-icon>
+        </v-btn>
 
         <!-- INSTAGRAM ACCOUNT -->
-        <v-col cols="4">
-          <div class="mb-6">
-            <v-btn
-              icon
-              fab
-              elevation="3"
-              style="background-color: #c13584"
-              href="https://instagram.com"
-              target="_blank"
-            >
-              <v-icon color="white">mdi-instagram</v-icon>
-            </v-btn>
-          </div>
-        </v-col>
+        <v-btn
+          icon
+          fab
+          elevation="3"
+          style="background-color: #c13584"
+          href="https://instagram.com"
+          target="_blank"
+        >
+          <v-icon color="white">mdi-instagram</v-icon>
+        </v-btn>
 
         <!-- FACEBOOK ACCOUNT -->
-        <v-col cols="4">
-          <div class="mb-6">
-            <v-btn
-              icon
-              fab
-              elevation="3"
-              style="background-color: #1877f2"
-              href="https://facebook.com/oro.botico"
-              target="_blank"
-            >
-              <v-icon color="white">mdi-facebook</v-icon>
-            </v-btn>
-          </div>
-        </v-col>
-      </v-row>
+        <v-btn
+          icon
+          fab
+          elevation="3"
+          style="background-color: #1877f2"
+          href="https://facebook.com/oro.botico"
+          target="_blank"
+        >
+          <v-icon color="white">mdi-facebook</v-icon>
+        </v-btn>
+      </div>
     </div>
 
     <!-- LANDING BUTTON -->

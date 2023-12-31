@@ -47,16 +47,14 @@
           @click="isDrawerLeftOpen = !isDrawerLeftOpen"
         >
           <b
-            >ORO <span class="text-gold d-none d-sm-inline-block"
-              >BÓTICO</span
-            ></b
+            >ORO
+            <span class="text-gold d-none d-sm-inline-block">BÓTICO</span></b
           >
         </span>
         <nuxt-link v-else to="/" class="black--text">
           <b
-            >ORO <span class="text-gold d-none d-sm-inline-block"
-              >BÓTICO</span
-            ></b
+            >ORO
+            <span class="text-gold d-none d-sm-inline-block">BÓTICO</span></b
           >
         </nuxt-link>
       </v-toolbar-title>
@@ -309,7 +307,8 @@
         <div v-else class="text-center text-gold pt-3">
           <v-icon size="72px" class="text-gold mb-6">mdi-bell</v-icon>
           <p>
-            Necesitas estar registrado para acceder a las novedades de Oro Bótico
+            Necesitas estar registrado para acceder a las novedades de Oro
+            Bótico
           </p>
           <!-- <div class="mt-9">
             <v-btn
@@ -801,7 +800,9 @@
       class="App-footer elevation-6 white--text text-center d-block pa-15 bg-tr-white"
     >
       <div class="d-inline-block">
-        <span class="text-dark"><b>ORO</b><b class="text-gold">BÓTICO</b> </span>
+        <span class="text-dark"
+          ><b>ORO</b><b class="text-gold">BÓTICO</b>
+        </span>
       </div>
       <span class="text-dark">&copy; {{ new Date().getFullYear() }}</span
       ><span class="text-dark">
@@ -1315,10 +1316,28 @@ export default {
         })
         .catch((error) => {
           console.error("[error]", error);
+          const errorStatus =
+            error && error.response && error.response.status
+              ? error.response.status
+              : null;
+
+          const errorMessage =
+            errorStatus == 401 || errorStatus == 403
+              ? "Necesita autorización para continuar. Cerrando..."
+              : "Ha ocurrido un inconveniente al cargar tus notificaciones";
+
           this.$notify({
-            message:
-              "Se ha presentado un inconveniente al cargar las notificaciones",
+            message: errorMessage,
             color: "red",
+            timeout: 4500,
+            onNotify: () => {
+              if (errorStatus == 401 || errorStatus == 403) {
+                this.$router.push("/auth");
+                this.$notify({
+                  message: "Ingresa nuevamente las credenciales del sistema",
+                });
+              }
+            },
           });
         });
     },
@@ -1574,9 +1593,29 @@ export default {
         })
         .catch((error) => {
           console.log("[error]", error);
+
+          const errorStatus =
+            error && error.response && error.response.status
+              ? error.response.status
+              : null;
+
+          const errorMessage =
+            errorStatus == 401 || errorStatus == 403
+              ? "Necesita autorización para continuar. Cerrando..."
+              : "Ha ocurrido un inconveniente al marcar la lectura/no-lectura de la notificación";
+
           this.$notify({
-            message: "Ha ocurrido un inconveniente al marcar la 'lectura'",
+            message: errorMessage,
             color: "red",
+            timeout: 4500,
+            onNotify: () => {
+              if (errorStatus == 401 || errorStatus == 403) {
+                this.$router.push("/auth");
+                this.$notify({
+                  message: "Ingresa nuevamente las credenciales del sistema",
+                });
+              }
+            },
           });
         });
     },

@@ -73,6 +73,25 @@
           <validation-errors :errors="nameErrors" />
         </div>
 
+        <!-- Description -->
+        <div class="mb-4">
+          <v-textarea
+            v-model="form.description"
+            :disabled="isWaiting || disabled"
+            :error="descriptionErrors.length > 0"
+            placeholder="Ej: Orientado al Scalper, y a riesgo calculado. Con más de 100 cuentas de experiencia"
+            rounded
+            rows="3"
+            row-height="21px"
+            outlined
+            color="amber"
+            label="Descripción"
+          />
+
+          <!-- Description Input Validation -->
+          <validation-errors :errors="descriptionErrors" />
+        </div>
+
         <!-- Phone -->
         <div class="mb-4">
           <v-text-field
@@ -160,7 +179,7 @@
         </div>
 
         <!-- Location Address -->
-        <div class="mb-9">
+        <div class="mb-4">
           <v-textarea
             v-model="form.locationAddress"
             :disabled="isWaiting || disabled"
@@ -217,6 +236,8 @@ import { required, minLength, maxLength } from "vuelidate/lib/validators";
 
 const nameMinLength = 3;
 const nameMaxLength = 33;
+const descriptionMinLength = 3;
+const descriptionMaxLength = 300;
 const phoneMinLength = 9;
 const phoneMaxLength = 300;
 const locationAddressMinLength = 3;
@@ -235,6 +256,11 @@ export default {
         required,
         minLength: minLength(nameMinLength),
         maxLength: maxLength(nameMaxLength),
+      },
+      description: {
+        required,
+        minLength: minLength(descriptionMinLength),
+        maxLength: maxLength(descriptionMaxLength),
       },
       locationCountry: {
         required,
@@ -289,6 +315,7 @@ export default {
         locationCity: "",
       },
       nameErrors: [],
+      descriptionErrors: [],
       phoneErrors: [],
       locationCountryErrors: [],
       locationCityErrors: [],
@@ -305,6 +332,7 @@ export default {
       if (userValue != null) {
         this.form.pictureUrl = userValue.pictureUrl;
         this.form.name = userValue.name;
+        this.form.description = userValue.description;
         this.form.email = userValue.email;
         this.form.phone = userValue.phone;
         this.form.locationCountry = userValue.locationCountry;
@@ -431,6 +459,7 @@ export default {
       }
 
       this.nameErrors = [];
+      this.descriptionErrors = [];
       this.locationCountryErrors = [];
       this.locationCityErrors = [];
       this.locationAddressErrors = [];
@@ -454,6 +483,28 @@ export default {
           this.nameErrors.push({
             key: "maxLength",
             text: `El nombre es demasiado largo (max: ${nameMaxLength})`,
+          });
+        }
+      }
+
+      // Name Validation
+      if (!field || field === "description") {
+        if (!this.$v.form.description.required) {
+          this.descriptionErrors.push({
+            key: "required",
+            text: "La descripción es necesaria",
+          });
+        }
+        if (!this.$v.form.description.minLength) {
+          this.descriptionErrors.push({
+            key: "minLength",
+            text: `La descripción es demasiado corta (min: ${descriptionMinLength})`,
+          });
+        }
+        if (!this.$v.form.description.maxLength) {
+          this.descriptionErrors.push({
+            key: "maxLength",
+            text: `La descripción es demasiado larga (max: ${descriptionMaxLength})`,
           });
         }
       }
@@ -520,6 +571,7 @@ export default {
 
       return (
         !this.nameErrors.length &&
+        !this.descriptionErrors.length &&
         !this.locationCountryErrors.length &&
         !this.locationCityErrors.length &&
         !this.locationAddressErrors.length &&
@@ -532,6 +584,7 @@ export default {
       this.formCheckIn = false;
       this.disabled = true;
       this.nameErrors = [];
+      this.descriptionErrors = [];
       this.locationAddressErrors = [];
       this.locationCountryErrors = [];
       this.locationCityErrors = [];

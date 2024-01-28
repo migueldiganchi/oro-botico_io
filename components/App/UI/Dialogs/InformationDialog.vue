@@ -7,7 +7,7 @@
   >
     <v-card class="mx-auto bg-dark-gradient" max-width="450px" dark>
       <v-card-text class="bg-dark pa-6 text-center">
-        <h3 class="text-h6 text-center mb-9 mt-3 text-light x-small-box">
+        <h3 class="text-h4 text-center mb-9 mt-3 text-light x-small-box">
           <b v-text="title" />
         </h3>
 

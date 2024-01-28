@@ -20,13 +20,12 @@
         </v-col>
 
         <!-- BUSINESS INFORMATION -->
-        <v-col
-          v-if="authUser?.isLandingUser"
-          cols="12"
-          md="6"
-          class="pa-0 pl-sm-3 ma-0"
-        >
-          <member-business-form :user="authUser" :is-waiting="isWaiting" />
+        <v-col v-if="false" cols="12" md="6" class="pa-0 pl-sm-3 ma-0">
+          <member-business-form
+            :user="authUser"
+            :is-waiting="isWaiting"
+            @onSave="saveAuthUser"
+          />
         </v-col>
       </v-row>
     </div>
@@ -152,6 +151,13 @@ export default {
       }
 
       if (
+        userDataToSave.description &&
+        userDataToSave.description != this.authUser.description
+      ) {
+        this.authUser.description = userDataToSave.description;
+      }
+
+      if (
         userDataToSave.locationCountry &&
         userDataToSave.locationCountry != this.authUser.locationCountry
       ) {
@@ -186,6 +192,7 @@ export default {
       const {
         pictureUrl,
         name,
+        description,
         locationCountry,
         locationCity,
         locationAddress,
@@ -196,6 +203,7 @@ export default {
       const authUserToSave = {
         pictureUrl,
         name,
+        description,
         locationCountry,
         locationCity,
         locationAddress,

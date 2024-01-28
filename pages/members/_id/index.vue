@@ -7,11 +7,6 @@
     :mediaUrl="pictureUrl"
   >
     <div class="mx-auto xs-box mb-15">
-      <!-- Description -->
-      <p class="mb-6">
-        {{ member.description }}
-      </p>
-
       <!-- Bio -->
       <p v-if="member.bio" class="mb-6">
         {{ member.bio }}
@@ -39,6 +34,7 @@
           style="background-color: #25d366"
           href="https://api.whatsapp.com"
           target="_blank"
+          class="mx-3"
         >
           <v-icon>mdi-whatsapp</v-icon>
         </v-btn>
@@ -51,6 +47,7 @@
           style="background-color: #c13584"
           href="https://instagram.com"
           target="_blank"
+          class="mx-3"
         >
           <v-icon color="white">mdi-instagram</v-icon>
         </v-btn>
@@ -63,6 +60,7 @@
           style="background-color: #1877f2"
           href="https://facebook.com/oro.botico"
           target="_blank"
+          class="mx-3"
         >
           <v-icon color="white">mdi-facebook</v-icon>
         </v-btn>

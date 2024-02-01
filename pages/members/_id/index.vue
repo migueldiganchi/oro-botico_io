@@ -32,7 +32,7 @@
           fab
           elevation="3"
           style="background-color: #25d366"
-          href="https://api.whatsapp.com"
+          href="https://api.whatsapp.com/send?phone=+5491135077622&text=Me%20interesa%20comenzar%20un%20proyecto%20con%20Oro%20B%C3%B3tico."
           target="_blank"
           class="mx-3"
         >
@@ -45,7 +45,7 @@
           fab
           elevation="3"
           style="background-color: #c13584"
-          href="https://instagram.com"
+          href="https://instagram.com/neutron.bot"
           target="_blank"
           class="mx-3"
         >
@@ -58,7 +58,7 @@
           fab
           elevation="3"
           style="background-color: #1877f2"
-          href="https://facebook.com/oro.botico"
+          href="https://facebook.com/oro.botico.io"
           target="_blank"
           class="mx-3"
         >

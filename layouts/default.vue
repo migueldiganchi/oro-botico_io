@@ -536,7 +536,7 @@
 
           <div
             v-if="isStepperOpen"
-            class="stepper-box mb-15 text-center animate__animated"
+            class="stepper-box mb-15 App-sm-box mx-auto text-center animate__animated"
             :class="{
               animate__bounce: isStepperOpen,
             }"
@@ -567,7 +567,7 @@
               <v-stepper-items>
                 <!-- Company -->
                 <v-stepper-content step="1" class="pa-9 bg-dark-gradient">
-                  <v-card class="mb-12 bg-tr-light">
+                  <v-card class="mb-12 bg-tr-light App-xs-box mx-auto">
                     <step-1-form
                       :title="stepTitles.step1"
                       :description="stepDescriptions.description1"
@@ -586,7 +586,7 @@
                 <!-- Color settings & media content -->
                 <v-stepper-content step="2" class="pa-9 bg-dark-gradient">
                   <v-card
-                    class="mb-12 d-flex justify-center align-center bg-tr-light"
+                    class="mb-12 d-flex justify-center align-center bg-tr-light App-xs-box mx-auto"
                   >
                     <step-2-form
                       :title="stepTitles.step2"
@@ -605,7 +605,7 @@
 
                 <v-stepper-content step="3" class="pa-9 bg-dark-gradient">
                   <v-card
-                    class="mb-12 d-flex justify-center align-center bg-tr-light"
+                    class="mb-12 d-flex justify-center align-center bg-tr-light App-xs-box mx-auto"
                   >
                     <step-3-form
                       :title="stepTitles.step3"
@@ -964,13 +964,13 @@ export default {
     notifications: [],
     stepTitles: {
       step1: "Conecta",
-      step2: "Enseña",
-      step3: "Gana",
+      step2: "Muéstrate",
+      step3: "Crece",
     },
     stepDescriptions: {
-      description1: `Comienza conectando tu asistente virtual a tu plataforma educativa en línea. Es un proceso simple y rápido que te permitirá personalizar la experiencia de aprendizaje.`,
-      description2: `Tu asistente virtual se convierte en tu aliado educativo. Puedes programarlo para enseñar lecciones, responder preguntas y proporcionar información relevante. Tus alumnos tendrán acceso a un tutor virtual disponible las 24 horas.`,
-      description3: `AAprovecha al máximo tu asistente virtual para aumentar tus ingresos. Ofrece cursos adicionales, vende material de estudio y permite que tu asistente realice ventas en automático. Esto significa más ganancias para ti sin esfuerzo adicional.`,
+      description1: `Crea tu Cuenta en segundos con tu correo electrónico`,
+      description2: `Crea tu Perfil de Trader Profesional ingresando información fidedigna de tu proceso de Trading`,
+      description3: `Listo, nosotros nos encargamos de dar a Conocerte como Trader Profesional`,
     },
     botSidebarItems: [
       {

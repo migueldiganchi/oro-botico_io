@@ -871,11 +871,9 @@ header.v-app-bar {
 }
 
 .bot-qa .qa-list .qa-list-item {
+  @include border-radius(36px);
   transition: all 0.333s ease;
   margin-bottom: 27px;
-  border-radius: 33px;
-  -moz-border-radius: 33px;
-  -webkit-border-radius: 33px;
   border: solid 1px $amber !important;
   -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.24);
   -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.24);
@@ -894,7 +892,7 @@ header.v-app-bar {
   padding: 15.3px;
 
   &_actions {
-    @include border-radius(33px);
+    @include border-radius(36px);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -909,9 +907,10 @@ header.v-app-bar {
 
 .bot-qa .qa-list .qa-list-item .qa-list-item-question {
   transition: all 0.333s ease;
-  border-radius: 33px;
-  -moz-border-radius: 33px;
-  -webkit-border-radius: 33px;
+  border-radius: 36px;
+  -moz-border-radius: 36px;
+  -webkit-border-radius: 36px;
+  // border: solid 1px blue !important;
 }
 
 .bot-qa .qa-list .qa-list-item.active .qa-list-item-question * {
@@ -922,7 +921,7 @@ header.v-app-bar {
   @include bg-dark-gradient;
   color: #fff !important;
   text-shadow: none !important;
-  border-radius: 0;
+  @include border-radius(0);
   -webkit-border-top-left-radius: 33px !important;
   -webkit-border-top-right-radius: 33px !important;
   -moz-border-radius-topleft: 33px !important;
@@ -930,7 +929,7 @@ header.v-app-bar {
   border-top-left-radius: 33px !important;
   border-top-right-radius: 33px !important;
   padding: 21px;
-  font-size: 21px;
+  font-size: 18px;
 }
 
 .bot-qa .qa-list .qa-list-item:last-child {

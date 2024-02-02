@@ -36,6 +36,7 @@
           x-small
           fab
           class="bg-gold mr-3 ml-0 mb-1"
+          elevation="3"
           outlined
           @click="betaCommunication"
         >
@@ -969,8 +970,8 @@ export default {
     },
     stepDescriptions: {
       description1: `Crea tu Cuenta en segundos con tu correo electrónico`,
-      description2: `Crea tu Perfil de Trader Profesional ingresando información fidedigna de tu proceso de Trading`,
-      description3: `Listo, nosotros nos encargamos de dar a Conocerte como Trader Profesional`,
+      description2: `Agrega tu Perfil de Trader Profesional ingresando información fidedigna de tu proceso de gestión de Trading`,
+      description3: `¡Listo para brillar! Comparte tu perfil profesional y únete a nuestra comunidad de Traders Profesionales.`,
     },
     botSidebarItems: [
       {

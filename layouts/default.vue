@@ -802,7 +802,7 @@
     >
       <div class="d-inline-block">
         <span class="text-dark"
-          ><b>ORO</b><b class="text-gold">BÓTICO</b>
+          ><b>ORO</b> <b class="text-gold">BÓTICO</b>
         </span>
       </div>
       <span class="text-dark">&copy; {{ new Date().getFullYear() }}</span

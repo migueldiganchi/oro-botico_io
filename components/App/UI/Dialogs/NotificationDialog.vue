@@ -7,13 +7,17 @@
   >
     <v-card light>
       <!-- begin:: Notification title -->
-      <v-card-title class="text-center d-block text-h6 pb-6" :class="headerClass">
+      <v-card-title
+        class="text-center d-block pb-6"
+        :class="headerClass"
+        style="white-space: pre-wrap; word-break: break-word"
+      >
         <h2 v-if="notificationIcon" class="mt-3 mb-6">
-          <v-icon class="text-h2" :class="`${notificationColor}--text`">{{
+          <v-icon class="text-h2" :class="`amber--text`">{{
             notificationIcon
           }}</v-icon>
         </h2>
-        <b>{{ notification?.title }}</b>
+        <b class="amber--text">{{ notification?.title }}</b>
       </v-card-title>
       <!-- end:: Notification title -->
 
@@ -62,14 +66,16 @@
         <!-- begin:: Ok button -->
         <v-btn
           v-if="notification.readAt"
-          color="white"
-          @click="toggleReading()"
-          rounded
           :loading="isLoading"
+          color="white"
+          class="bg-gold"
+          rounded
+          @click="toggleReading()"
         >
-          <span :class="`${notificationColor}--text`">
+          <!-- <span :class="`${notificationColor}--text`"> -->
+          <span :class="`white--text`">
             <v-icon>mdi-eye-remove</v-icon>
-            {{ "Marcar como no leído" }}
+            {{ "No leído" }}
           </span>
         </v-btn>
         <!-- end:: Ok button -->
@@ -103,18 +109,7 @@ export default {
 
   computed: {
     notificationColor() {
-      switch (this.notification?.kind) {
-        case "success":
-          return "green";
-        case "danger":
-          return "red";
-        case "warning":
-          return "amber";
-        case "info":
-          return "blue";
-        default:
-          return "blue";
-      }
+      return "black";
     },
     headerClass() {
       return `${this.notificationColor} lighten-5 ${this.notificationColor}--text`;

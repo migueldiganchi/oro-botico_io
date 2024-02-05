@@ -7,18 +7,22 @@
   >
     <v-card class="mx-auto bg-dark-gradient" max-width="450px" dark>
       <v-card-text class="bg-dark pa-6 text-center">
-        <h3 class="text-h4 text-center mb-9 mt-3 text-light x-small-box">
+        <h3 class="text-h4 text-center mb-9 mt-6 text-light x-small-box">
           <b v-text="title" />
         </h3>
 
         <!-- Media URL -->
-        <div class="mb-6 text-center">
-          <logo :url="mediaUrl" />
+        <div class="mb-9 text-center">
+          <v-img
+            :src="mediaUrl"
+            class="is-circular d-inline-block"
+            style="max-width: 178.3px"
+          />
         </div>
 
         <!-- Introduction text -->
         <b
-          class="ma-0 pa-0 mt-3 mb-3 d-block text-light text-lg-h5 text-sm-h6 x-small-box mx-auto"
+          class="ma-0 pa-0 mb-3 d-block text-light text-lg-h6 text-sm-h7 x-small-box mx-auto"
           style="word-break: normal !important"
         >
           <span v-html="subtitle" />

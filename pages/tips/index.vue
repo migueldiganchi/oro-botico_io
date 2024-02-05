@@ -27,7 +27,7 @@
         <span class="my-6 text-h6 x-small-box mx-auto d-block">
           <b class="white--text text-thin">{{
             isRandoming || isRandom
-              ? "Cargando consejo al azar. Aguarde un momento por favor.."
+              ? "Cargando consejo al azar. Aguarda un momento por favor.."
               : "Leer un consejo al azar"
           }}</b>
         </span>

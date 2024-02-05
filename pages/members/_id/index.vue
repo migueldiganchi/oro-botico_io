@@ -5,6 +5,7 @@
     :description="member.description"
     :breadcrumbs="breadcrumbItems"
     :mediaUrl="pictureUrl"
+    :is-media-circular="true"
   >
     <div class="mx-auto xs-box mb-15">
       <!-- Bio -->

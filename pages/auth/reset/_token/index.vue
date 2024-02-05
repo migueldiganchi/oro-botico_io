@@ -108,7 +108,7 @@ export default {
       isTokenValid: false,
       isFormSent: false,
       isSuccessfullChanged: false,
-      waitingMessage: "Aguarde un momento por favor...",
+      waitingMessage: "Aguarda un momento por favor...",
       tokenStatusMessage: "Verificando los permisos para realizar el cambio...",
     };
   },

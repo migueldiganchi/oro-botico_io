@@ -27,6 +27,7 @@
           class="bg-gold mb-0 elevation-3"
           rounded
           icon
+          large
           @click.prevent="openInfo()"
         >
           <v-icon>mdi-fingerprint</v-icon>

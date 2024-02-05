@@ -33,8 +33,8 @@
         <!-- Picture Url -->
         <div class="mb-9 text-center">
           <!-- Avatar -->
-          <div class="mb-6">
-            <v-avatar size="90px">
+          <div class="mt-15 mb-12">
+            <v-avatar size="145.9px">
               <img
                 :src="form.pictureUrl ? form.pictureUrl : defaultPictureUrl"
                 alt="John"
@@ -196,19 +196,18 @@
 
         <!-- Email input -->
         <div class="mb-9">
-          <h3>hello@ciudadbotica.com</h3>
-
           <p class="pt-6 px-6">
             <small class="text-gold"
-              ><b>IMPORTANTE</b>: Si deseas modificar el
-              <b>correo electrónico</b> con el que registraste la cuenta, por
-              favor escríbenos a
+              ><b>IMPORTANTE</b>: Si deseas
+              <b>modificar el correo electrónico</b> o dar de Baja tu Cuenta en
+              nuestra Plataforma, por favor escríbenos a
               <a
-                href="mailto:hello@ciudadbotica.com?subject=Quiero ser parte de Oro Bótico&body=Me interesa registrarme en el Club de Enseñanza Gratuita de Trading"
-                style="text-decoration: none"
-                ><b class="text-gold">hello@ciudadbotica.com</b></a
-              ></small
-            >
+                href="mailto:hello@ciudadbotica.com?subject=Quiero%20Modificar%20Mi%20Cuenta%20en%20Oro%20Bótico&body=Me%20interesa%20cambiar%20mi%20correo%20o%20eliminar%20mi%20cuenta%20en%20Oro%20Bótico"
+                style="text-decoration: none; cursor: pointer"
+              >
+                <b class="text-gold">hello@ciudadbotica.com</b>
+              </a>
+            </small>
           </p>
         </div>
       </div>

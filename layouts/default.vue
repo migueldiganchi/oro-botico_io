@@ -965,13 +965,13 @@ export default {
     notifications: [],
     stepTitles: {
       step1: "Conecta",
-      step2: "Muéstrate",
+      step2: "Comparte",
       step3: "Crece",
     },
     stepDescriptions: {
-      description1: `Crea tu Cuenta en segundos con tu correo electrónico`,
-      description2: `Agrega tu Perfil de Trader Profesional ingresando información fidedigna de tu proceso de gestión de Trading`,
-      description3: `¡Listo para brillar! Comparte tu perfil profesional y únete a nuestra comunidad de Traders Profesionales.`,
+      description1: `Crea tu Cuenta en segundos usando únicamente tu correo electrónico y nombre`,
+      description2: `Agrega tu Perfil de <b>Trader Profesional</b> ingresando información fidedigna de tu proceso de gestión de Trading`,
+      description3: `<b>¡Listo para brillar!</b> Comparte tu perfil profesional y únete a nuestra comunidad de Traders Profesionales.`,
     },
     botSidebarItems: [
       {
@@ -1351,7 +1351,7 @@ export default {
     showAuthUserInfo() {
       if (!this.authenticatedUser) {
         return this.$notify({
-          message: "Cargando usuario. Aguarde un momento por favor...",
+          message: "Cargando usuario. Aguarda un momento por favor...",
           timeout: 4599,
         });
       }

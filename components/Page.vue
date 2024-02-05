@@ -5,12 +5,17 @@
   >
     <div class="title mb-6">
       <!-- LOGO -->
-      <logo
-        v-if="isLogoVisible"
-        :url="logoUrl"
-        size="xs"
-        class="ma-0 mt-6 mb-9 animate__animated animate__pulse"
-      />
+      <div v-if="isLogoVisible">
+        <logo
+          v-if="!isMediaCircular"
+          :url="logoUrl"
+          size="xs"
+          class="ma-0 mt-6 mb-9 animate__animated animate__pulse"
+        />
+        <div v-else class="picture mb-6 is-circular member-image mx-auto">
+          <v-img :src="logoUrl" class="is-circular" />
+        </div>
+      </div>
 
       <!-- TITLE -->
       <div
@@ -75,6 +80,10 @@ export default {
     mediaUrl: {
       type: String,
       default: () => "",
+    },
+    isMediaCircular: {
+      type: Boolean,
+      default: () => false,
     },
   },
   computed: {

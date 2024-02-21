@@ -356,11 +356,8 @@
             >
               <h1 CLASS="mb-3">ORO <span class="text-gold">BÓTICO</span></h1>
               <h3 class="mx-auto d-inline-block" style="max-width: 360px">
-                <span>TRADING</span>
-                <b class="text-gold">SIMPLE</b>,
-                <b class="text-gold">INTUITIVO</b>,
-                <b class="text-gold">RENTABLE</b> Y GUIADO POR INTELIGENCIA
-                <b class="text-gold">ARTIFICIAL</b>
+                DIRECTORIO <b class="text-gold">DIGITAL</b> DE
+                <b class="text-gold">TRADERS PROFESIONALES</b>
               </h3>
             </div>
           </div>

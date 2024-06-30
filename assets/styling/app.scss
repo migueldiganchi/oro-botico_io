@@ -1262,5 +1262,8 @@ header.v-app-bar {
 }
 
 .v-card.notification-card {
-  border: solid 1px $amber !important;
+  border: solid 2px $amber !important;
+  &.read {
+    border-style: dotted !important;
+  }
 }

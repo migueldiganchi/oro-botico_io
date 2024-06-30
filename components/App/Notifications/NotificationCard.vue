@@ -1,10 +1,16 @@
 <template>
-  <v-card light class="notification-card">
+  <v-card
+    light
+    class="notification-card"
+    :class="{
+      read: notification.readAt,
+    }"
+  >
     <v-card-title
       class="px-4 text-left text-dark grey lighten-4"
       :class="{ 'mb-2': isDescriptionVisible }"
     >
-      <small style="font-size: 15px; line-height: 19px">{{
+      <small style="font-size: 15px; line-height: 19px; word-break: keep-all">{{
         notification.title
       }}</small>
     </v-card-title>

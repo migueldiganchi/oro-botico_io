@@ -75,7 +75,7 @@
           <!-- <span :class="`${notificationColor}--text`"> -->
           <span :class="`white--text`">
             <v-icon>mdi-eye-remove</v-icon>
-            {{ "No leído" }}
+            {{ "No leí esto" }}
           </span>
         </v-btn>
         <!-- end:: Ok button -->

@@ -15,7 +15,7 @@
           style="word-break: normal !important"
         />
         <small v-if="member?.description" class="ma-0 pa-0 mt-3 text-h7">{{
-          member.description | truncate(18)
+          member.description | truncate(55)
         }}</small>
       </div>
     </v-card-title>

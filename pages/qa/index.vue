@@ -71,13 +71,6 @@ export default {
           answer:
             "Sí, contamos con un equipo de soporte técnico disponible para ayudarte con cualquier pregunta o problema que puedas tener al utilizar Oro Bótico. Puedes comunicarte con nosotros a través de correo electrónico o chat en vivo.",
         },
-        {
-          key: 10,
-          question:
-            "¿Puedo probar las funciones premium de Oro Bótico antes de suscribirme?",
-          answer:
-            "Sí, ofrecemos una prueba gratuita del plan 'Perfil Premium + Asistente Virtual' para que puedas explorar todas las características antes de tomar una decisión de suscripción.",
-        },
       ],
       breadcrumbItems: [
         {

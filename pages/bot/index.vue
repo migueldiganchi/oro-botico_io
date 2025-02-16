@@ -35,7 +35,7 @@
           <v-list-item>
             <v-list-item-content>
               <v-list-item-title
-                >Nano Bot
+                >Oro Bot
                 <small style="font-size: 10px"
                   >from <b>Oro Bótico</b></small
                 ></v-list-item-title
@@ -172,10 +172,10 @@ export default {
       return require("@/assets/media/nano-bot.png") + "?" + new Date();
     },
     pageTitle() {
-      return "Diccio-Bot";
+      return "Oro Bot";
     },
     pageDescription() {
-      return "¡Hola! Mi nombre es <b>Nano Bot</b>, soy el asistente virtual de <b>Oro Bótico</b>, y estoy aquí para ayudarte en lo que pueda con tu <b>Trading</b>";
+      return "¡Hola! Mi nombre es <b>Oro Bot</b>, soy el asistente virtual de <b>Oro Bótico</b>, y estoy aquí para ayudarte en lo que pueda con tu <b>Trading</b>";
     },
   },
   methods: {

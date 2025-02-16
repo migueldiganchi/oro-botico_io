@@ -1226,7 +1226,7 @@ export default {
       const betaInfo = {
         title: "¡Descubre la Beta de Oro Bótico!",
         description:
-          "Estamos emocionados de presentar la fase beta de Oro Bótico, la plataforma pionera que lleva la educación y el entrenamiento en trading a nuevas alturas mediante el poder de la inteligencia artificial avanzada.",
+          "Descubre la beta de Oro Bótico, la plataforma pionera que revoluciona la formación en trading. Con inteligencia artificial avanzada, optimiza estrategias y maximiza resultados.",
         mediaUrl: require("~/assets/media/trading.png"),
       };
 

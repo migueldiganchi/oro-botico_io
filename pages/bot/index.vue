@@ -10,7 +10,8 @@
       <!-- BOT CONVERSATION -->
       <bot-conversation
         :conversation="conversation"
-        :is-writing="isBotWriting"
+        :is-writing="isBotWriting || isWaiting"
+        :is-sticky="isSticky"
         @onSend="sendInteraction"
         @onClose="goHome"
       />
@@ -139,10 +140,19 @@
 
 <script>
 export default {
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+
   data() {
     return {
       isRankingBotOpened: false,
       isUserEnabledToRate: false,
+      isSticky: false,
       botRating: 0,
       breadcrumbItems: [
         {
@@ -164,6 +174,7 @@ export default {
       isConversationHere: false,
     };
   },
+
   computed: {
     isWaiting() {
       return this.waitingMessage != "";
@@ -178,9 +189,23 @@ export default {
       return "¡Hola! Mi nombre es <b>Oro Bot</b>, soy el asistente virtual de <b>Oro Bótico</b>, y estoy aquí para ayudarte en lo que pueda con tu <b>Trading</b>";
     },
   },
+
   methods: {
     startBot() {
       this.isConversationHere = true;
+    },
+
+    handleScroll() {
+      const scrollPosition = window.innerHeight + window.scrollY;
+      const pageHeight = document.documentElement.scrollHeight;
+
+      console.log("[scrollPosition]", scrollPosition);
+      console.log("[pageHeight]", pageHeight);
+
+      // Si el usuario está a más de 150px del fondo, activamos el sticky
+      this.isSticky = pageHeight - scrollPosition > 150;
+
+      console.log("[this.isSticky]", this.isSticky);
     },
 
     rate() {
@@ -275,6 +300,8 @@ export default {
                       message:
                         "Desde ya muchas gracias por tu interés en probar el serivicio",
                     });
+
+                    this.$bus.$emit("on-sent");
                   }, 1999); // Writing time
                 }, 999); // Pause
               }, 3339); // Writing time

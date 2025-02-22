@@ -13,7 +13,7 @@
     </div>
 
     <!-- CONVERSATION -->
-    <div v-else align="center" class="bot-conversation_timeline text-center">
+    <div v-else class="bot-conversation_timeline text-center">
       <div
         v-for="(interaction, interactionIndex) in conversation"
         :key="interactionIndex"
@@ -71,7 +71,7 @@
         <div
           class="bot-conversation_timeline_box-item-text bot-conversation_timeline_box-bot-text"
         >
-          <i v-text="'...'" class="primary--text" />
+          <i v-text="'...'" class="amber--text" />
         </div>
         <div
           class="bot-conversation_timeline_box-item-avatar bot-conversation_timeline_box-bot-avatar"
@@ -92,82 +92,45 @@
       <v-col cols="10" md="9">
         <h3
           v-if="isWriting"
-          class="mb-3 mt-0 mr-3 text-md-right text-center text-thin"
+          class="mb-3 mt-0 mr-3 text-md-right text-thin"
         >
           <small class="text-gold">
             El asistente virtual está escribiendo...
           </small>
         </h3>
 
-        <v-form @submit.prevent="sendMessage">
-          <!-- @todo: SWITCH BETWEEN CONTROL TYPES -->
-          <div class="v-form-field pa-0">
-            <v-text-field
-              v-model="form.textToSend"
-              :disabled="isWriting"
-              :placeholder="randomPlaceholder || placeholder"
-              ref="messageTextBox"
-              autocomplete="off"
-              autofocus
-              solo
-              light
-              rows="1"
-              name="input-7-4"
-              class="mb-0 text-dark"
-              rounded
-              @focus="loadRandomPlaceholder"
-              @blur="clearRandomPlaceholder"
-            />
-          </div>
+        <v-form
+          @submit.prevent="sendMessage"
+          class="d-flex align-center pa-1 radius-45 bg-golden"
+          :class="{
+            'sticky-footer elevation-3': isSticky,
+          }"
+        >
+          <v-text-field
+            v-model="form.textToSend"
+            :disabled="isWriting"
+            :placeholder="randomPlaceholder || placeholder"
+            ref="messageTextBox"
+            autocomplete="off"
+            autofocus
+            solo
+            light
+            hide-details
+            class="flex-grow-1 text-dark elevation-0"
+            rounded
+            @focus="loadRandomPlaceholder"
+            @blur="clearRandomPlaceholder"
+          />
 
-          <div class="text-right text-center mt-9">
-            <!-- <v-btn
-              :disabled="isWriting"
-              type="button"
-              rounded
-              color="white"
-              elevation="3"
-              class="pl-2 pr-3"
-              @click="close"
-            >
-              <v-icon class="primary--text">mdi-home</v-icon>
-              <v-icon class="primary--text ml-2">mdi-arrow-left</v-icon>
-            </v-btn>
-
-            <v-spacer /> -->
-
-            <!-- MICROPHONE -->
-            <v-btn
-              v-if="false"
-              type="button"
-              icon
-              color="white"
-              class="white mr-3"
-              elevation="3"
-              @click="
-                $notify({
-                  color: 'primary darken-1',
-                  message: 'Start voice module',
-                  timeout: '10000',
-                })
-              "
-            >
-              <v-icon class="primary--text">mdi-microphone</v-icon>
-            </v-btn>
-
-            <v-btn
-              :disabled="isWriting"
-              type="submit"
-              rounded
-              color="white"
-              outlined
-              elevation="3"
-              class="pr-2 white"
-            >
-              <span class="text-dark ml-2"> Enviar</span>
-              <v-icon class="text-dark ml-2">mdi-arrow-right</v-icon>
-            </v-btn>
-          </div>
+          <v-btn
+            :disabled="isWriting"
+            type="submit"
+            icon
+            :color="isWriting ? 'grey' : 'white'"
+            class="ml-2"
+          >
+            <v-icon>mdi-arrow-right</v-icon>
+          </v-btn>
         </v-form>
       </v-col>
     </v-row>
@@ -183,6 +146,10 @@ export default {
     this.$bus.$off("on-sent");
   },
   props: {
+    isSticky: {
+      type: Boolean,
+      default: () => false,
+    },
     conversation: {
       type: Array,
       default: () => [],
@@ -234,10 +201,30 @@ export default {
       this.$emit("onClose");
     },
     clearForm() {
-      this.$nextTick(() => this.$refs.messageTextBox.focus());
+      this.$nextTick(() => {
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: "smooth",
+        });
+        this.$refs.messageTextBox.focus();
+      });
     },
   },
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.sticky-footer {
+  animation: all 0.9s ease !important;
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 450px;
+  padding: 10px 0;
+
+  @media screen and (max-width: 450px) {
+    min-width: initial;
+  }
+}
+</style>

@@ -1250,7 +1250,7 @@ header.v-app-bar {
       &-bot {
         &-text {
           @include border-radius-dots(27px, 9px, 27px, 27px);
-          text-align: right !important;
+          text-align: left !important;
         }
         &-avatar {
           margin-left: 18px;

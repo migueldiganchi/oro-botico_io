@@ -6,10 +6,10 @@
       class="App-container xs-box text-center mb-16"
     >
       <div class="mb-9 mt-6">
-        <v-icon size="72px" color="#d1a837"> mdi-message-bulleted-off </v-icon>
+        <v-icon size="72px" color="#d1a837"> mdi-message </v-icon>
       </div>
 
-      <span class="text-muted">No se han registrado mensajes</span>
+      <!-- <span class="text-muted">No se han registrado mensajes</span> -->
     </div>
 
     <!-- CONVERSATION -->
@@ -47,7 +47,7 @@
           <div
             class="bot-conversation_timeline_box-item-text bot-conversation_timeline_box-bot-text"
           >
-            <span v-html="interaction.message" />
+            <span v-html="formatMessage(interaction.message)" />
           </div>
 
           <div
@@ -73,7 +73,7 @@
         <div
           class="bot-conversation_timeline_box-item-text bot-conversation_timeline_box-bot-text"
         >
-          <i v-text="'...'" class="amber--text" />
+          <i v-text="'✍️...'" class="amber--text" />
         </div>
         <div
           class="bot-conversation_timeline_box-item-avatar bot-conversation_timeline_box-bot-avatar"
@@ -175,7 +175,14 @@ export default {
     },
     placeholder() {
       const placeholder = this.samples[this.placeholderIndex];
-      return placeholder;
+
+      return this.isWriting
+        ? "✍️..."
+        : this.isWaiting && this.form.textToSend !== ""
+        ? this.form.textToSend
+        : this.isWaiting
+        ? "⏳..."
+        : placeholder;
     },
     userPictureUrl() {
       return require("~/assets/media/user.png");
@@ -198,6 +205,39 @@ export default {
         this.form.textToSend = "";
       });
     },
+
+    formatMessage(text) {
+      if (!text) return "";
+
+      text = text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+
+      const lines = text.split("\n");
+      let formattedText = "";
+      let inList = false;
+
+      lines.forEach((line) => {
+        if (line.trim().startsWith("* ")) {
+          if (!inList) {
+            formattedText += "<ul>";
+            inList = true;
+          }
+          formattedText += `<li>${line.replace(/^\* /, "").trim()}</li>`;
+        } else {
+          if (inList) {
+            formattedText += "</ul>";
+            inList = false;
+          }
+          formattedText += `<p>${line.trim()}</p>`;
+        }
+      });
+
+      if (inList) {
+        formattedText += "</ul>";
+      }
+
+      return formattedText;
+    },
+
     close() {
       this.$emit("onClose");
     },
@@ -223,6 +263,7 @@ export default {
   transform: translateX(-50%);
   min-width: 450px;
   padding: 10px 0;
+  z-index: 999;
 
   @media screen and (max-width: 450px) {
     min-width: initial;

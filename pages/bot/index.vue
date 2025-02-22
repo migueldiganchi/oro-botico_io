@@ -16,6 +16,27 @@
         @onSend="sendInteraction"
         @onClose="goHome"
       />
+
+      <!-- Suggested Questions -->
+      <div
+        v-if="!isWaiting && !isBotWriting"
+        class="pa-3 radius-45 bg-tr-white border-gold"
+        :class="{
+          'mt-15': !isSticky,
+        }"
+      >
+        <v-chip-group active-class="amber--text" light color="amber">
+          <v-chip
+            v-for="(question, qIndex) in suggestedQuestions"
+            :key="qIndex"
+            aria-disabled="true"
+            class="bg-gold"
+            @click="sendInteraction(question)"
+          >
+            {{ question }}
+          </v-chip>
+        </v-chip-group>
+      </div>
     </div>
 
     <!-- FLOATING BUTTON -->
@@ -155,8 +176,28 @@ export default {
     return {
       isRankingBotOpened: false,
       isUserEnabledToRate: false,
+      isBotWriting: false,
+      isConversationHere: false,
       isSticky: false,
+
       botRating: 0,
+
+      userName: "",
+      waitingMessage: "",
+
+      conversation: [],
+
+      suggestedQuestions: [
+        "¿Qué es el Trading?",
+        "¿Qué son las velas Japonesas?",
+        "¿Qué significa Operar?",
+        "¿Qué es Oro Bótico?",
+        "¿En qué se diferencia de Chat GPT?",
+        "¿Qué beneficios ofrece Oro Bótico?",
+        "¿Qué servicios brindan?",
+        "¿Cómo y Cuándo puedo comenzar?",
+      ],
+
       breadcrumbItems: [
         {
           text: "Inicio",
@@ -170,11 +211,6 @@ export default {
           to: "/bot",
         },
       ],
-      userName: "",
-      conversation: [],
-      waitingMessage: "",
-      isBotWriting: false,
-      isConversationHere: false,
     };
   },
 
@@ -189,7 +225,7 @@ export default {
       return "León";
     },
     pageDescription() {
-      return "¡Hola! Mi nombre es <b>León</b>, ¿Cómo puedo ayudarte a mejorar tu <b>Trading</b>?";
+      return "¡Hola! Mi nombre es <b>León</b>. Soy el Asistente Virtual Representante de Oro Bótico";
     },
   },
 
@@ -202,13 +238,8 @@ export default {
       const scrollPosition = window.innerHeight + window.scrollY;
       const pageHeight = document.documentElement.scrollHeight;
 
-      console.log("[scrollPosition]", scrollPosition);
-      console.log("[pageHeight]", pageHeight);
-
-      // Si el usuario está a más de 150px del fondo, activamos el sticky
+      // Set Sticky Value
       this.isSticky = pageHeight - scrollPosition > 150;
-
-      console.log("[this.isSticky]", this.isSticky);
     },
 
     rate() {
@@ -236,6 +267,13 @@ export default {
 
     sendInteraction(interactionMessage) {
       this.waitingMessage = "Enviando mensaje...";
+
+      // USER IS ADDING THE INTERACTION
+      this.addInteraction({
+        from: "user",
+        message: interactionMessage,
+      });
+
       return this.$store
         .dispatch("talk", {
           interaction: {
@@ -244,12 +282,6 @@ export default {
           },
         })
         .then(({ message, intent }) => {
-          // USER IS ADDING THE INTERACTION
-          this.addInteraction({
-            from: "user",
-            message: interactionMessage,
-          });
-
           setTimeout(() => {
             this.isBotWriting = true;
             setTimeout(() => {

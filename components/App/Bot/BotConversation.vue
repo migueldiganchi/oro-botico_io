@@ -19,29 +19,10 @@
         :key="interactionIndex"
         class="bot-conversation_timeline_box"
       >
-        <!-- BOT -->
-        <div
-          v-if="interaction.from && interaction.from == 'bot'"
-          class="bot-conversation_timeline_box-item bot-conversation_timeline_box-bot d-flex justify-end"
-        >
-          <div
-            class="bot-conversation_timeline_box-item-text bot-conversation_timeline_box-bot-text"
-          >
-            <span v-html="interaction.message" />
-          </div>
-          <div
-            class="bot-conversation_timeline_box-item-avatar bot-conversation_timeline_box-bot-avatar"
-          >
-            <!-- <v-avatar> -->
-            <img :src="botPictureUrl" style="max-width: 63px" alt="Qref-Bot" />
-            <!-- </v-avatar> -->
-          </div>
-        </div>
-
         <!-- USER -->
         <div
-          v-else-if="interaction.from && interaction.from == 'user'"
-          class="bot-conversation_timeline_box-item bot-conversation_timeline_box-user"
+          v-if="interaction.from && interaction.from == 'user'"
+          class="bot-conversation_timeline_box-item bot-conversation_timeline_box-user d-flex justify-start align-center"
         >
           <div
             class="bot-conversation_timeline_box-item-avatar bot-conversation_timeline_box-user-avatar"
@@ -50,10 +31,31 @@
               <img :src="userPictureUrl" alt="User Name" />
             </v-avatar>
           </div>
+
           <div
             class="bot-conversation_timeline_box-item-text bot-conversation_timeline_box-user-text"
           >
             <span v-text="interaction.message" />
+          </div>
+        </div>
+
+        <!-- BOT -->
+        <div
+          v-if="interaction.from && interaction.from == 'bot'"
+          class="bot-conversation_timeline_box-item bot-conversation_timeline_box-bot d-flex justify-end align-center"
+        >
+          <div
+            class="bot-conversation_timeline_box-item-text bot-conversation_timeline_box-bot-text"
+          >
+            <span v-html="interaction.message" />
+          </div>
+
+          <div
+            class="bot-conversation_timeline_box-item-avatar bot-conversation_timeline_box-bot-avatar"
+          >
+            <!-- <v-avatar> -->
+            <img :src="botPictureUrl" style="max-width: 63px" alt="León" />
+            <!-- </v-avatar> -->
           </div>
         </div>
       </div>
@@ -66,7 +68,7 @@
       class="bot-conversation_timeline text-center animate__animated animate__flash mt-7"
     >
       <div
-        class="bot-conversation_timeline_box-item bot-conversation_timeline_box-bot d-flex justify-end"
+        class="bot-conversation_timeline_box-item bot-conversation_timeline_box-bot d-flex justify-end align-center"
       >
         <div
           class="bot-conversation_timeline_box-item-text bot-conversation_timeline_box-bot-text"
@@ -76,9 +78,7 @@
         <div
           class="bot-conversation_timeline_box-item-avatar bot-conversation_timeline_box-bot-avatar"
         >
-          <!-- <v-avatar> -->
-          <img :src="botPictureUrl" alt="Qref-Bot" style="max-width: 63px" />
-          <!-- </v-avatar> -->
+          <img :src="botPictureUrl" alt="León" style="max-width: 63px" />
         </div>
       </div>
     </div>
@@ -90,10 +90,7 @@
       class="mt-16 bot-conversation_interaction-form"
     >
       <v-col cols="10" md="9">
-        <h3
-          v-if="isWriting"
-          class="mb-3 mt-0 mr-3 text-md-right text-thin"
-        >
+        <h3 v-if="isWriting" class="mb-3 mt-0 mr-3 text-md-right text-thin">
           <small class="text-gold">
             El asistente virtual está escribiendo...
           </small>
@@ -108,7 +105,7 @@
         >
           <v-text-field
             v-model="form.textToSend"
-            :disabled="isWriting"
+            :disabled="isWriting || isWaiting"
             :placeholder="randomPlaceholder || placeholder"
             ref="messageTextBox"
             autocomplete="off"
@@ -123,10 +120,10 @@
           />
 
           <v-btn
-            :disabled="isWriting"
+            :disabled="isWriting || isWaiting"
             type="submit"
             icon
-            :color="isWriting ? 'grey' : 'white'"
+            :color="isWriting || isWaiting ? 'grey' : 'white'"
             class="ml-2"
           >
             <v-icon>mdi-arrow-right</v-icon>
@@ -155,6 +152,10 @@ export default {
       default: () => [],
     },
     isWriting: {
+      type: Boolean,
+      default: () => false,
+    },
+    isWaiting: {
       type: Boolean,
       default: () => false,
     },

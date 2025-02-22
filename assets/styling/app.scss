@@ -1223,7 +1223,6 @@ header.v-app-bar {
           @include box-small-shadow;
           article {
             margin-top: 18px;
-            margin-bottom: -9px !important;
             text-align: right !important;
             a {
               @include border-radius(36px);

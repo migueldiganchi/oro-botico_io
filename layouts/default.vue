@@ -1051,6 +1051,11 @@ export default {
             icon: "mdi-lightbulb",
             to: "/tips",
           },
+          {
+            title: "Asistente IA",
+            icon: "mdi-robot",
+            to: "/bot",
+          },
           // Auth section
           {
             separator: {
@@ -1091,6 +1096,11 @@ export default {
             title: "Consejos de Trading",
             icon: "mdi-lightbulb",
             to: "/tips",
+          },
+          {
+            title: "Asistente IA",
+            icon: "mdi-robot",
+            to: "/bot",
           },
           // Auth section
           {

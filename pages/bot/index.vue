@@ -10,7 +10,8 @@
       <!-- BOT CONVERSATION -->
       <bot-conversation
         :conversation="conversation"
-        :is-writing="isBotWriting || isWaiting"
+        :is-writing="isBotWriting"
+        :is-waiting="isWaiting"
         :is-sticky="isSticky"
         @onSend="sendInteraction"
         @onClose="goHome"
@@ -36,7 +37,7 @@
           <v-list-item>
             <v-list-item-content>
               <v-list-item-title
-                >Oro Bot
+                >León
                 <small style="font-size: 10px"
                   >from <b>Oro Bótico</b></small
                 ></v-list-item-title
@@ -60,7 +61,7 @@
           </v-list-item>
         </v-list>
 
-        <v-divider></v-divider>
+        <v-divider />
 
         <div class="py-3 text-center">
           <small
@@ -142,6 +143,8 @@
 export default {
   mounted() {
     window.addEventListener("scroll", this.handleScroll);
+
+    this.handleScroll();
   },
 
   beforeDestroy() {
@@ -183,10 +186,10 @@ export default {
       return require("@/assets/media/nano-bot.png") + "?" + new Date();
     },
     pageTitle() {
-      return "Oro Bot";
+      return "León";
     },
     pageDescription() {
-      return "¡Hola! Mi nombre es <b>Oro Bot</b>, soy el asistente virtual de <b>Oro Bótico</b>, y estoy aquí para ayudarte en lo que pueda con tu <b>Trading</b>";
+      return "¡Hola! Mi nombre es <b>León</b>, ¿Cómo puedo ayudarte a mejorar tu <b>Trading</b>?";
     },
   },
 

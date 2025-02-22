@@ -107,6 +107,13 @@ export default {
               icon: "mdi-bell",
               to: "/dashboard/notifications",
             },
+
+            {
+              key: "6",
+              title: "Bot",
+              icon: "mdi-robot",
+              to: "/bot",
+            },
             // {
             //   key: "3",
             //   title: "Asistentes",

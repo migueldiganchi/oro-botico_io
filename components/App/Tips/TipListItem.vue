@@ -10,8 +10,8 @@
 
     <!-- Tip title -->
     <div class="d-block pa-6">
-      <div class="d-block text-center white--text">
-        <b>{{ maxText(tip.title, 36) }}</b>
+      <div class="text-left white--text">
+        <b>{{ maxText(tip.title, 45) }}</b>
       </div>
     </div>
 
@@ -23,12 +23,20 @@
         @click.stop.prevent="expandTip(tip)"
         :to="`/tips/${tip.id}`"
         :disabled="loading"
+        :rounded="!loading"
+        :icon="loading"
+        :loading="loading"
         class="text-light text-flat bg-gold"
-        rounded
         text
       >
-        <v-icon class="mr-2 text-flat">mdi-plus</v-icon>
-        <span>Más</span>
+        <v-icon
+          class="text-flat"
+          :class="{
+            'mr-2': !loading,
+          }"
+          >mdi-plus</v-icon
+        >
+        <span v-if="!loading">Más</span>
       </v-btn>
 
       <v-spacer />

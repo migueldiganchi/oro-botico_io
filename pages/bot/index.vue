@@ -25,22 +25,34 @@
       <!-- Suggested Questions -->
       <div
         v-if="!isWaiting && !isBotWriting"
-        class="pa-3 radius-45 bg-tr-white border-gold"
+        class="pa-3 radius-45 bg-tr-white border-gold bg-golden"
         :class="{
           'mt-15': !isSticky,
         }"
       >
-        <v-chip-group active-class="amber--text" light color="amber">
-          <v-chip
-            v-for="(question, qIndex) in suggestedQuestions"
-            :key="qIndex"
-            aria-disabled="true"
-            class="bg-gold"
-            @click="sendInteraction(question)"
+        <v-slide-group show-arrows>
+          <v-slide-item
+            v-for="(question, index) in suggestedQuestions"
+            :key="index"
+            v-slot="{ active, toggle }"
           >
-            {{ question }}
-          </v-chip>
-        </v-chip-group>
+            <v-btn
+              :input-value="active"
+              :elevation="isWaiting ? 0 : 3"
+              class="to-camel-case pr-2"
+              style="margin: 4px; text-transform: none"
+              active-class="white--text"
+              color="white"
+              depressed
+              light
+              rounded
+              @click="sendInteraction(question, toggle)"
+            >
+              <small>{{ question }}</small>
+              <v-icon class="ml-2">mdi-arrow-right</v-icon>
+            </v-btn>
+          </v-slide-item>
+        </v-slide-group>
       </div>
     </div>
 

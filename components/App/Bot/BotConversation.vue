@@ -98,7 +98,7 @@
 
         <v-form
           @submit.prevent="sendMessage"
-          class="d-flex align-center pa-1 radius-45 bg-golden"
+          class="d-flex align-center pa-1 radius-45 bg-gold"
           :class="{
             'sticky-footer elevation-3': isSticky,
           }"

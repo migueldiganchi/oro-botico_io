@@ -25,7 +25,7 @@
       <!-- Suggested Questions -->
       <div
         v-if="!isWaiting && !isBotWriting"
-        class="pa-3 radius-45 bg-tr-white border-gold bg-golden"
+        class="pa-3 radius-45 bg-tr-white border-gold bg-gold"
         :class="{
           'mt-15': !isSticky,
         }"

@@ -98,7 +98,8 @@
 
         <v-form
           @submit.prevent="sendMessage"
-          class="d-flex align-center pa-1 radius-45 bg-gold"
+          class="d-flex align-center pa-1 radius-45 bg-gold border-white elevation-3"
+          sty
           :class="{
             'sticky-footer elevation-3': isSticky,
           }"
@@ -162,7 +163,16 @@ export default {
   },
   data() {
     return {
-      samples: ["Escribe aquí tu consulta..."],
+      placeholders: [
+        "Escribe aquí tu consulta...",
+        "¿En qué puedo ayudarte hoy?",
+        "Escribe tu pregunta aquí...",
+        "Dime qué necesitas saber...",
+        "Estoy listo para responderte...",
+        "Formula tu consulta aquí...",
+        "Pregúntame lo que quieras...",
+        "Haz tu consulta ahora...",
+      ],
       form: {
         textToSend: "",
       },
@@ -171,10 +181,10 @@ export default {
   },
   computed: {
     placeholderIndex() {
-      return Math.floor(Math.random() * this.samples.length);
+      return Math.floor(Math.random() * this.placeholders.length);
     },
     placeholder() {
-      const placeholder = this.samples[this.placeholderIndex];
+      const placeholder = this.placeholders[this.placeholderIndex];
 
       return this.isWriting
         ? "✍️..."

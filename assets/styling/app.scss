@@ -766,6 +766,10 @@ header.v-app-bar {
   border: solid 1px $amber;
 }
 
+.border-white {
+  border: solid 1px #fff !important;
+}
+
 .v-btn__content span {
   padding-top: 5.1px !important;
 }

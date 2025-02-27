@@ -25,7 +25,7 @@
       <!-- Suggested Questions -->
       <div
         v-if="!isWaiting && !isBotWriting"
-        class="pa-3 radius-45 bg-tr-white border-gold bg-gold"
+        class="pa-3 radius-45 bg-tr-white bg-gold border-white elevation-3"
         :class="{
           'mt-15': !isSticky,
         }"

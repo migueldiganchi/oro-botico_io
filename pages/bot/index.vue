@@ -8,14 +8,19 @@
   >
     <div class="App-sm-box mx-auto">
       <!-- BOT CONVERSATION -->
-      <bot-conversation
-        :conversation="conversation"
-        :is-writing="isBotWriting"
-        :is-waiting="isWaiting"
-        :is-sticky="isSticky"
-        @onSend="sendInteraction"
-        @onClose="goHome"
-      />
+      <div
+        class="border border-info"
+        :style="`${isSticky ? 'padding-bottom: 120px;' : ''}`"
+      >
+        <bot-conversation
+          :conversation="conversation"
+          :is-writing="isBotWriting"
+          :is-waiting="isWaiting"
+          :is-sticky="isSticky"
+          @onSend="sendInteraction"
+          @onClose="goHome"
+        />
+      </div>
 
       <!-- Suggested Questions -->
       <div
@@ -239,7 +244,7 @@ export default {
       const pageHeight = document.documentElement.scrollHeight;
 
       // Set Sticky Value
-      this.isSticky = pageHeight - scrollPosition > 150;
+      this.isSticky = pageHeight - scrollPosition > 450;
     },
 
     rate() {

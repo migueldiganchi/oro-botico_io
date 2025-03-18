@@ -1202,7 +1202,7 @@ header.v-app-bar {
 }
 
 .bot-conversation {
-  max-width: 600px !important;
+  max-width: 720px !important;
 
   &_timeline {
     &_box {
@@ -1221,10 +1221,17 @@ header.v-app-bar {
         }
 
         &-text {
-          padding: 21.6px 21.6px 18px 18px;
+          padding: 21.6px ;
           background: #fff;
           font-size: smaller;
           @include box-small-shadow;
+
+
+          p {
+            padding: 0 !important;
+            margin: 0 !important;
+          }
+
           article {
             margin-top: 18px;
             text-align: right !important;
@@ -1234,30 +1241,28 @@ header.v-app-bar {
               color: #fff;
               text-decoration: none !important;
               background-color: orange;
-              padding: 12.6px 27px !important;
-              margin: 0 0 12.6px 12.6px !important;
             }
           }
         }
       }
 
-      &-user {
+      &-bot {
+        &-text {
+          @include border-radius-dots(27px, 27px, 27px, 9px);
+          text-align: left !important;
+        }
         &-avatar {
           margin-right: 18px;
         }
-        &-text {
-          @include border-radius-dots(9px, 27px, 27px, 27px);
-          text-align: left !important;
-        }
       }
 
-      &-bot {
-        &-text {
-          @include border-radius-dots(27px, 9px, 27px, 27px);
-          text-align: left !important;
-        }
+      &-user {
         &-avatar {
           margin-left: 18px;
+        }
+        &-text {
+          @include border-radius-dots(27px, 27px, 9px, 27px);
+          text-align: left !important;
         }
       }
     }

@@ -1,6 +1,6 @@
 <template>
   <v-container class="px-0 bot-conversation">
-    <!-- EMPTY CONVERSATION -->
+    <!-- Empty Conversation -->
     <div
       v-if="!conversation.length"
       class="App-container xs-box text-center mb-16"
@@ -8,89 +8,92 @@
       <div class="mb-9 mt-6">
         <v-icon size="72px" color="#d1a837"> mdi-message </v-icon>
       </div>
-
-      <!-- <span class="text-muted">No se han registrado mensajes</span> -->
     </div>
 
-    <!-- CONVERSATION -->
+    <!-- Conversation -->
     <div v-else class="bot-conversation_timeline text-center">
       <div
         v-for="(interaction, interactionIndex) in conversation"
         :key="interactionIndex"
         class="bot-conversation_timeline_box"
       >
-        <!-- USER -->
-        <div
-          v-if="interaction.from && interaction.from == 'user'"
-          class="bot-conversation_timeline_box-item bot-conversation_timeline_box-user d-flex justify-start align-center"
-        >
-          <div
-            class="bot-conversation_timeline_box-item-avatar bot-conversation_timeline_box-user-avatar"
-          >
-            <v-avatar>
-              <img :src="userPictureUrl" alt="User Name" />
-            </v-avatar>
-          </div>
-
-          <div
-            class="bot-conversation_timeline_box-item-text bot-conversation_timeline_box-user-text"
-          >
-            <span v-text="interaction.message" />
-          </div>
-        </div>
-
-        <!-- BOT -->
+        <!-- Bot Side (Left) -->
         <div
           v-if="interaction.from && interaction.from == 'bot'"
-          class="bot-conversation_timeline_box-item bot-conversation_timeline_box-bot d-flex justify-end align-center"
+          class="bot-conversation_timeline_box-item bot-conversation_timeline_box-bot d-flex justify-start align-bottom"
         >
+          <!-- Bot Avatar -->
+          <div
+            class="bot-conversation_timeline_box-item-avatar bot-conversation_timeline_box-bot-avatar mt-auto"
+          >
+            <img :src="botPictureUrl" style="max-width: 63px" alt="León" />
+          </div>
+
+          <!-- Bot Message -->
           <div
             class="bot-conversation_timeline_box-item-text bot-conversation_timeline_box-bot-text"
           >
             <span v-html="formatMessage(interaction.message)" />
           </div>
+        </div>
 
+        <!-- User Side (Right) -->
+        <div
+          v-if="interaction.from && interaction.from == 'user'"
+          class="bot-conversation_timeline_box-item bot-conversation_timeline_box-user d-flex justify-end align-bottom"
+        >
+          <!-- User Message -->
           <div
-            class="bot-conversation_timeline_box-item-avatar bot-conversation_timeline_box-bot-avatar"
+            class="bot-conversation_timeline_box-item-text bot-conversation_timeline_box-user-text"
           >
-            <!-- <v-avatar> -->
-            <img :src="botPictureUrl" style="max-width: 63px" alt="León" />
-            <!-- </v-avatar> -->
+            <span v-text="interaction.message" />
+          </div>
+
+          <!-- User Avatar -->
+          <div
+            class="bot-conversation_timeline_box-item-avatar bot-conversation_timeline_box-user-avatar mt-auto"
+          >
+            <v-avatar>
+              <img :src="userPictureUrl" alt="User Name" />
+            </v-avatar>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- WRITING EFFECT -->
+    <!-- Writing Effect -->
     <div
       v-if="isWriting"
       align="center"
       class="bot-conversation_timeline text-center animate__animated animate__flash mt-7"
     >
       <div
-        class="bot-conversation_timeline_box-item bot-conversation_timeline_box-bot d-flex justify-end align-center"
+        class="bot-conversation_timeline_box-item bot-conversation_timeline_box-bot d-flex justify-start align-center"
       >
-        <div
-          class="bot-conversation_timeline_box-item-text bot-conversation_timeline_box-bot-text"
-        >
-          <i v-text="'✍️...'" class="amber--text" />
-        </div>
+        <!-- Writing Bot Avatar -->
         <div
           class="bot-conversation_timeline_box-item-avatar bot-conversation_timeline_box-bot-avatar"
         >
           <img :src="botPictureUrl" alt="León" style="max-width: 63px" />
         </div>
+
+        <!-- Writing Bot Message -->
+        <div
+          class="bot-conversation_timeline_box-item-text bot-conversation_timeline_box-bot-text"
+        >
+          <i v-text="'✍️...'" class="amber--text" />
+        </div>
       </div>
     </div>
 
-    <!-- INTERACTION FORM -->
+    <!-- Interaction Form -->
     <v-row
       align="center"
       justify="center"
       class="mt-16 bot-conversation_interaction-form"
     >
       <v-col cols="10" md="9">
-        <h3 v-if="isWriting" class="mb-3 mt-0 mr-3 text-md-right text-thin">
+        <h3 v-if="isWriting" class="mb-3 mt-0 ml-3 text-left text-thin">
           <small class="text-gold">
             El asistente virtual está escribiendo...
           </small>

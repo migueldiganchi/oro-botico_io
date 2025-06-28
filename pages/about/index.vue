@@ -10,7 +10,9 @@
       <v-row class="mt-12">
         <v-col cols="12">
           <h3 class="mb-9 text-center text-thin">
-            Conoce al <b>Equipo</b> detrás de <b>Oro Bótico</b>
+            Conoce al <b>Equipo</b> responsable de<br /><b
+              >construir Oro Bótico</b
+            >
           </h3>
         </v-col>
       </v-row>
@@ -35,7 +37,9 @@
           <h3 class="text-h6 mb-2">
             <b>{{ member.name }}</b>
           </h3>
-          <p class="grey--text text--darken-1">{{ member.role }}</p>
+          <p class="grey--text text--darken-3">
+            {{ member.role }}
+          </p>
         </v-col>
       </v-row>
 
@@ -91,32 +95,28 @@ export default {
 
       teamMembers: [
         {
-          name: "Miguel Diganchi",
-          role: "Fundador y Arquitecto de Infraestructura",
-          icon: "mdi-server-network",
-          color: "primary",
-          mediaFileName: "mike.jpeg",
-        },
-        {
           name: "Orfelia Diganchi",
-          role: "Co-fundadora y Gerente de Análisis de Datos",
+          role: "Co-fundadora y Directora de Logística",
           icon: "mdi-chart-line",
-          color: "success",
           mediaFileName: "gringa.jpeg",
         },
         {
           name: "Alejandro Orieta",
-          role: "Co-fundador y Director de Estrategia",
+          role: "Co-fundador y Jefe de Estrategia",
           icon: "mdi-strategy",
-          color: "info",
           mediaFileName: "ale.png",
         },
         {
           name: "Roberto Perez",
-          role: "Co-fundador y Director de Logística",
+          role: "Co-fundador y Gerente Creativo",
           icon: "mdi-truck-delivery",
-          color: "warning",
           mediaFileName: "rober.jpg",
+        },
+        {
+          name: "Miguel Diganchi",
+          role: "Fundador y Director General",
+          icon: "mdi-server-network",
+          mediaFileName: "mike.jpeg",
         },
       ],
 

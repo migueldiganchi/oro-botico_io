@@ -6,6 +6,40 @@
     :breadcrumbs="breadcrumbItems"
   >
     <div class="box mx-auto">
+      <!-- Team Section: Title -->
+      <v-row class="mt-12">
+        <v-col cols="12">
+          <h3 class="mb-9 text-center text-thin">
+            Conoce al <b>Equipo</b> detrás de <b>Oro Bótico</b>
+          </h3>
+        </v-col>
+      </v-row>
+
+      <!-- Team Section: Body -->
+      <v-row justify="center" class="mb-9">
+        <v-col
+          cols="12"
+          sm="6"
+          md="6"
+          class="text-center"
+          v-for="member in teamMembers"
+          :key="member.name"
+        >
+          <v-avatar size="120" class="mb-4 elevation-4">
+            <img
+              :src="getPictureUrl(member)"
+              :alt="member.name"
+              style="border-radius: 50%"
+            />
+          </v-avatar>
+          <h3 class="text-h6 mb-2">
+            <b>{{ member.name }}</b>
+          </h3>
+          <p class="grey--text text--darken-1">{{ member.role }}</p>
+        </v-col>
+      </v-row>
+
+      <!-- Hero Section -->
       <v-row style="font-size: 19.9px">
         <v-col>
           <div class="box">
@@ -23,6 +57,7 @@
         </v-col>
       </v-row>
 
+      <!-- Mission -->
       <v-row style="font-size: 19.9px">
         <v-col cols="12" md="6">
           <h2 class="text-h4 mb-9"><b>Misión</b></h2>
@@ -46,8 +81,6 @@
       </v-row>
     </div>
   </page>
-  <!-- </div>
-  </v-container> -->
 </template>
 
 <script>
@@ -55,6 +88,37 @@ export default {
   data() {
     return {
       profiles: [],
+
+      teamMembers: [
+        {
+          name: "Miguel Diganchi",
+          role: "Fundador y Arquitecto de Infraestructura",
+          icon: "mdi-server-network",
+          color: "primary",
+          mediaFileName: "mike.jpeg",
+        },
+        {
+          name: "Orfelia Diganchi",
+          role: "Co-fundadora y Gerente de Análisis de Datos",
+          icon: "mdi-chart-line",
+          color: "success",
+          mediaFileName: "gringa.jpeg",
+        },
+        {
+          name: "Alejandro Orieta",
+          role: "Co-fundador y Director de Estrategia",
+          icon: "mdi-strategy",
+          color: "info",
+          mediaFileName: "ale.png",
+        },
+        {
+          name: "Roberto Perez",
+          role: "Co-fundador y Director de Logística",
+          icon: "mdi-truck-delivery",
+          color: "warning",
+          mediaFileName: "rober.jpg",
+        },
+      ],
 
       breadcrumbItems: [
         {
@@ -79,6 +143,12 @@ export default {
 
     pageDescription() {
       return "<b>Comunidad Virtual dedicada al aprendizaje y perfeccionamiento de Trading</b>";
+    },
+  },
+
+  methods: {
+    getPictureUrl(member) {
+      return require(`@/assets/media/team/${member.mediaFileName}`);
     },
   },
 };

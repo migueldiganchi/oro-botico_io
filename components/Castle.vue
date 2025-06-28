@@ -76,9 +76,9 @@
           style="max-width: 540px"
         >
           <h1 class="text-thin">
-            Descubre cómo esta tecnología está <b>transformando la economía
-            global</b> y brindando <b>nuevas oportunidades</b> a aquellos que se aventuran
-            en <b>el mundo de las criptomonedas</b>
+            Conoce cómo los <b>Asistentes IA de Oro Bótico</b> están cambiando
+            el juego: cada uno representa a un <b>Trader profesional</b> con una
+            estrategia real, lista para enseñarte y ayudarte a operar.
           </h1>
         </div>
       </v-col>
@@ -127,7 +127,7 @@
     <!-- MEMBER STORIES -->
     <div v-if="$route.name != 'm-nickname'" class="mt-9">
       <h1 class="mb-12 pt-15 pb-9 text-dark small-box">
-        <span><b>¡HAY EQUIPO!</b></span>
+        <span><b>¡CONOCE A NUESTROS TRADERS PROFESIONALES!</b></span>
       </h1>
 
       <!-- MEMBER LIST -->
@@ -375,16 +375,6 @@ export default {
           description:
             "Tu Asistente Virtual estará listo para guiar a tus alumnos en el análisis y las señales de negociación, proporcionando conocimientos valiosos para sus operaciones.",
         },
-        // {
-        //   key: 3,
-        //   mediaUrl:
-        //     require("~/assets/media/features/group-chat.png") +
-        //     "?" +
-        //     new Date(),
-        //   title: "Clases en vivo",
-        //   description:
-        //     "Clases asistidas con IA podrán dar a tus alumnos la tranquilidad de que siempre estarán recibiendo asistencia",
-        // },
       ];
     },
 

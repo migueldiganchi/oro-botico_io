@@ -763,7 +763,7 @@ header.v-app-bar {
 }
 
 .border-gold {
-  border: solid 1px $amber;
+  border: solid 1px $amber !important;
 }
 
 .border-white {
@@ -1221,11 +1221,10 @@ header.v-app-bar {
         }
 
         &-text {
-          padding: 21.6px ;
+          padding: 21.6px;
           background: #fff;
           font-size: smaller;
           @include box-small-shadow;
-
 
           p {
             padding: 0 !important;

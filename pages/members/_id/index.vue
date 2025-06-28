@@ -11,16 +11,13 @@
       <!-- Assistant Chat Button -->
       <v-btn
         @click="showAssistantDialog = true"
-        class="mb-6"
+        class="mb-6 pl-2 bg-gold"
         rounded
         elevation="2"
-        style="
-          background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
-          color: white;
-        "
+        style="color: white"
       >
-        <v-icon class="mr-2" size="20">mdi-robot-excited</v-icon>
-        Chatear
+        <v-icon class="mr-2">mdi-robot-excited</v-icon>
+        <span>Chatear</span>
       </v-btn>
 
       <!-- Trader Header Info -->
@@ -37,8 +34,8 @@
         >
           <v-chip
             v-if="member.performance.winRate"
-            class="ma-1"
-            color="primary"
+            class="mx-2 mb-3"
+            color="orange"
             outlined
           >
             <v-icon left size="16">mdi-target</v-icon>
@@ -46,8 +43,8 @@
           </v-chip>
           <v-chip
             v-if="member.performance.totalReturn"
-            class="ma-1"
-            color="primary"
+            class="mx-2 mb-3"
+            color="orange"
             outlined
           >
             <v-icon left size="16">mdi-trending-up</v-icon>
@@ -55,7 +52,7 @@
           </v-chip>
           <v-chip
             v-if="member.performance.experience"
-            class="ma-1"
+            class="mx-2 mb-3"
             color="orange"
             outlined
           >
